@@ -19,7 +19,22 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        //let predicateForParents = NSPredicate(format: "parent == true")
+        
+        let parents = Parent.MR_findAll()
+    }
 
+    @IBAction func SaveParent(sender: UIButton) {
+        let parent = Parent.MR_createEntity()
+        parent?.firstName = "carlos"
+        parent?.lastName = "calderon"
+        
+        let context = NSManagedObjectContext.MR_defaultContext()
+        
+        context.MR_saveToPersistentStoreAndWait()
+    }
 
 }
 

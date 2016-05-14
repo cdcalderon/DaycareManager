@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+    <entity name="Kid" representedClassName=".Kid" syncable="YES">
+        <attribute name="dayOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="institutionId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="months" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nationality" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="years" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="parents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Parent" inverseName="kids" inverseEntity="Parent" syncable="YES"/>
+        <userInfo>
+            <entry key="MMRecordEntityPrimaryAttributeKey" value="id"/>
+        </userInfo>
+    </entity>
+    <entity name="Parent" representedClassName=".Parent" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formattedPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="institutionId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="kids" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Kid" inverseName="parents" inverseEntity="Kid" syncable="YES"/>
+        <userInfo>
+            <entry key="MMRecordEntityPrimaryAttributeKey" value="id"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="Parent" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="Kid" positionX="-54" positionY="27" width="128" height="195"/>
+    </elements>
+</model>
