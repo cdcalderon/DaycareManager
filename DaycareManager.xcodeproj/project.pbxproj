@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		010037CDFE629837A9CA1539 /* libPods-DaycareManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 072355234D11C60BC7B669F3 /* libPods-DaycareManager.a */; };
+		07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */; };
+		07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */; };
+		07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */; };
+		07BA1CF91CE7C79C00A92C4B /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF51CE7C79C00A92C4B /* NotoSans-Regular.ttf */; };
+		07BA1D001CE7C9F000A92C4B /* fb-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CFA1CE7C9F000A92C4B /* fb-icon.png */; };
+		07BA1D011CE7C9F000A92C4B /* logocomplete.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CFB1CE7C9F000A92C4B /* logocomplete.png */; };
+		07BA1D021CE7C9F000A92C4B /* logosingle.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CFC1CE7C9F000A92C4B /* logosingle.png */; };
+		07BA1D031CE7C9F000A92C4B /* placeholder-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CFD1CE7C9F000A92C4B /* placeholder-user.png */; };
+		07BA1D041CE7C9F000A92C4B /* thumbsUpE.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CFE1CE7C9F000A92C4B /* thumbsUpE.png */; };
+		07BA1D051CE7C9F000A92C4B /* thumbsUpF.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CFF1CE7C9F000A92C4B /* thumbsUpF.png */; };
+		07BA1D071CE7CE6B00A92C4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D061CE7CE6B00A92C4B /* LoginViewController.swift */; };
+		07BA1D091CE7EE6100A92C4B /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D081CE7EE6100A92C4B /* MaterialView.swift */; };
+		07BA1D0E1CE7F6C900A92C4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D0D1CE7F6C900A92C4B /* Constants.swift */; };
+		07BA1D101CE806AC00A92C4B /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D0F1CE806AC00A92C4B /* MaterialButton.swift */; };
+		07BA1D121CE80B7A00A92C4B /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D111CE80B7A00A92C4B /* MaterialTextField.swift */; };
 		07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */; };
 		07BBFF531CE6AE5600A2AAEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF521CE6AE5600A2AAEE /* ViewController.swift */; };
 		07BBFF561CE6AE5600A2AAEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BBFF541CE6AE5600A2AAEE /* Main.storyboard */; };
@@ -24,6 +39,21 @@
 
 /* Begin PBXFileReference section */
 		072355234D11C60BC7B669F3 /* libPods-DaycareManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaycareManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		07BA1CF51CE7C79C00A92C4B /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		07BA1CFA1CE7C9F000A92C4B /* fb-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb-icon.png"; sourceTree = "<group>"; };
+		07BA1CFB1CE7C9F000A92C4B /* logocomplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logocomplete.png; sourceTree = "<group>"; };
+		07BA1CFC1CE7C9F000A92C4B /* logosingle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logosingle.png; sourceTree = "<group>"; };
+		07BA1CFD1CE7C9F000A92C4B /* placeholder-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-user.png"; sourceTree = "<group>"; };
+		07BA1CFE1CE7C9F000A92C4B /* thumbsUpE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbsUpE.png; sourceTree = "<group>"; };
+		07BA1CFF1CE7C9F000A92C4B /* thumbsUpF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbsUpF.png; sourceTree = "<group>"; };
+		07BA1D061CE7CE6B00A92C4B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		07BA1D081CE7EE6100A92C4B /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		07BA1D0D1CE7F6C900A92C4B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		07BA1D0F1CE806AC00A92C4B /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		07BA1D111CE80B7A00A92C4B /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		07BBFF4D1CE6AE5600A2AAEE /* DaycareManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaycareManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BBFF521CE6AE5600A2AAEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +87,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07BA1CF11CE7C5CC00A92C4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */,
+				07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */,
+				07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */,
+				07BA1CF51CE7C79C00A92C4B /* NotoSans-Regular.ttf */,
+				07BA1CFA1CE7C9F000A92C4B /* fb-icon.png */,
+				07BA1CFB1CE7C9F000A92C4B /* logocomplete.png */,
+				07BA1CFC1CE7C9F000A92C4B /* logosingle.png */,
+				07BA1CFD1CE7C9F000A92C4B /* placeholder-user.png */,
+				07BA1CFE1CE7C9F000A92C4B /* thumbsUpE.png */,
+				07BA1CFF1CE7C9F000A92C4B /* thumbsUpF.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		07BA1D0A1CE7F5F300A92C4B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				07BA1D0D1CE7F6C900A92C4B /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		07BBFF441CE6AE5600A2AAEE = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +133,8 @@
 		07BBFF4F1CE6AE5600A2AAEE /* DaycareManager */ = {
 			isa = PBXGroup;
 			children = (
+				07BA1D0A1CE7F5F300A92C4B /* Util */,
+				07BA1CF11CE7C5CC00A92C4B /* Resources */,
 				07BBFF651CE6C78300A2AAEE /* Views */,
 				07BBFF641CE6C77200A2AAEE /* Model */,
 				07BBFF631CE6C73900A2AAEE /* Initialization */,
@@ -113,6 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				07BBFF521CE6AE5600A2AAEE /* ViewController.swift */,
+				07BA1D061CE7CE6B00A92C4B /* LoginViewController.swift */,
+				07BA1D081CE7EE6100A92C4B /* MaterialView.swift */,
+				07BA1D0F1CE806AC00A92C4B /* MaterialButton.swift */,
+				07BA1D111CE80B7A00A92C4B /* MaterialTextField.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -207,9 +268,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */,
 				07BBFF5B1CE6AE5600A2AAEE /* LaunchScreen.storyboard in Resources */,
+				07BA1D051CE7C9F000A92C4B /* thumbsUpF.png in Resources */,
+				07BA1D031CE7C9F000A92C4B /* placeholder-user.png in Resources */,
+				07BA1D021CE7C9F000A92C4B /* logosingle.png in Resources */,
+				07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */,
+				07BA1D041CE7C9F000A92C4B /* thumbsUpE.png in Resources */,
+				07BA1D011CE7C9F000A92C4B /* logocomplete.png in Resources */,
+				07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */,
+				07BA1D001CE7C9F000A92C4B /* fb-icon.png in Resources */,
 				07BBFF581CE6AE5600A2AAEE /* Assets.xcassets in Resources */,
 				07BBFF561CE6AE5600A2AAEE /* Main.storyboard in Resources */,
+				07BA1CF91CE7C79C00A92C4B /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,12 +339,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BA1D071CE7CE6B00A92C4B /* LoginViewController.swift in Sources */,
+				07BA1D0E1CE7F6C900A92C4B /* Constants.swift in Sources */,
+				07BA1D101CE806AC00A92C4B /* MaterialButton.swift in Sources */,
 				07BBFF531CE6AE5600A2AAEE /* ViewController.swift in Sources */,
 				07BBFF791CE6CFDD00A2AAEE /* Kid.swift in Sources */,
 				07BBFF681CE6C7E000A2AAEE /* DaycareManager.xcdatamodeld in Sources */,
 				07BBFF7A1CE6CFDD00A2AAEE /* Parent+CoreDataProperties.swift in Sources */,
 				07BBFF781CE6CFDD00A2AAEE /* Kid+CoreDataProperties.swift in Sources */,
 				07BBFF841CE6E96E00A2AAEE /* DMRecord.m in Sources */,
+				07BA1D091CE7EE6100A92C4B /* MaterialView.swift in Sources */,
+				07BA1D121CE80B7A00A92C4B /* MaterialTextField.swift in Sources */,
 				07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */,
 				07BBFF7B1CE6CFDD00A2AAEE /* Parent.swift in Sources */,
 			);
