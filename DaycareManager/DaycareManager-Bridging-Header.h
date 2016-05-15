@@ -18,5 +18,4 @@
 
 #import <MagicalRecord/NSPersistentStoreCoordinator+MagicalRecord.h>
 
-
 #endif /* DaycareManager_Bridging_Header_h */

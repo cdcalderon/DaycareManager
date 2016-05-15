@@ -10,3 +10,11 @@ import Foundation
 
 let SHADOW_COLOR: CGFloat = 157.0 / 255.0
 
+//Keys
+let KEY_UID = "uid"
+
+//Segues
+let SEGUE_LOGGED_IN = "loggedin"
+
+//Error Codes
+let STATUS_ACCOUNT_NONEXISTS = -8

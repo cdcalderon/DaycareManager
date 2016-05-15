@@ -25,6 +25,13 @@
 		07BA1D171CE838E700A92C4B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D141CE838E700A92C4B /* FBSDKLoginKit.framework */; };
 		07BA1D181CE838E700A92C4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D151CE838E700A92C4B /* Bolts.framework */; };
 		07BA1D191CE838E700A92C4B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D161CE838E700A92C4B /* FBSDKCoreKit.framework */; };
+		07BA1D2B1CE87B9800A92C4B /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D2A1CE87B9800A92C4B /* Firebase.framework */; };
+		07BA1D2D1CE87C1100A92C4B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D2C1CE87C1100A92C4B /* libc++.tbd */; };
+		07BA1D2F1CE87C1F00A92C4B /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D2E1CE87C1F00A92C4B /* libicucore.tbd */; };
+		07BA1D311CE87C2B00A92C4B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D301CE87C2B00A92C4B /* CFNetwork.framework */; };
+		07BA1D331CE87C3600A92C4B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D321CE87C3600A92C4B /* Security.framework */; };
+		07BA1D351CE87C4000A92C4B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D341CE87C4000A92C4B /* SystemConfiguration.framework */; };
+		07BA1D381CE87C9B00A92C4B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D371CE87C9B00A92C4B /* DataService.swift */; };
 		07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */; };
 		07BBFF531CE6AE5600A2AAEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF521CE6AE5600A2AAEE /* ViewController.swift */; };
 		07BBFF561CE6AE5600A2AAEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BBFF541CE6AE5600A2AAEE /* Main.storyboard */; };
@@ -59,7 +66,14 @@
 		07BA1D141CE838E700A92C4B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		07BA1D151CE838E700A92C4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		07BA1D161CE838E700A92C4B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		07BA1D201CE8401F00A92C4B /* DaycareManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaycareManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		07BA1D291CE8796C00A92C4B /* DaycareManager-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaycareManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		07BA1D2A1CE87B9800A92C4B /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		07BA1D2C1CE87C1100A92C4B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		07BA1D2E1CE87C1F00A92C4B /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		07BA1D301CE87C2B00A92C4B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		07BA1D321CE87C3600A92C4B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		07BA1D341CE87C4000A92C4B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		07BA1D371CE87C9B00A92C4B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		07BBFF4D1CE6AE5600A2AAEE /* DaycareManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaycareManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BBFF521CE6AE5600A2AAEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +99,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BA1D351CE87C4000A92C4B /* SystemConfiguration.framework in Frameworks */,
+				07BA1D331CE87C3600A92C4B /* Security.framework in Frameworks */,
+				07BA1D311CE87C2B00A92C4B /* CFNetwork.framework in Frameworks */,
+				07BA1D2F1CE87C1F00A92C4B /* libicucore.tbd in Frameworks */,
+				07BA1D2D1CE87C1100A92C4B /* libc++.tbd in Frameworks */,
 				07BA1D191CE838E700A92C4B /* FBSDKCoreKit.framework in Frameworks */,
+				07BA1D2B1CE87B9800A92C4B /* Firebase.framework in Frameworks */,
 				07BBFF6A1CE6C81E00A2AAEE /* CoreData.framework in Frameworks */,
 				07BA1D171CE838E700A92C4B /* FBSDKLoginKit.framework in Frameworks */,
 				07BA1D181CE838E700A92C4B /* Bolts.framework in Frameworks */,
@@ -124,11 +144,20 @@
 		07BA1D131CE838B500A92C4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07BA1D2A1CE87B9800A92C4B /* Firebase.framework */,
 				07BA1D141CE838E700A92C4B /* FBSDKLoginKit.framework */,
 				07BA1D151CE838E700A92C4B /* Bolts.framework */,
 				07BA1D161CE838E700A92C4B /* FBSDKCoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07BA1D361CE87C7E00A92C4B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07BA1D371CE87C9B00A92C4B /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		07BBFF441CE6AE5600A2AAEE = {
@@ -152,6 +181,7 @@
 		07BBFF4F1CE6AE5600A2AAEE /* DaycareManager */ = {
 			isa = PBXGroup;
 			children = (
+				07BA1D361CE87C7E00A92C4B /* Services */,
 				07BA1D131CE838B500A92C4B /* Frameworks */,
 				07BA1D0A1CE7F5F300A92C4B /* Util */,
 				07BA1CF11CE7C5CC00A92C4B /* Resources */,
@@ -163,7 +193,7 @@
 				07BBFF5C1CE6AE5600A2AAEE /* Info.plist */,
 				07BBFF821CE6E96E00A2AAEE /* DMRecord.h */,
 				07BBFF831CE6E96E00A2AAEE /* DMRecord.m */,
-				07BA1D201CE8401F00A92C4B /* DaycareManager-Bridging-Header.h */,
+				07BA1D291CE8796C00A92C4B /* DaycareManager-Bridging-Header.h */,
 			);
 			path = DaycareManager;
 			sourceTree = "<group>";
@@ -212,6 +242,11 @@
 		A41FAB895C63DFD992F4CA27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07BA1D341CE87C4000A92C4B /* SystemConfiguration.framework */,
+				07BA1D321CE87C3600A92C4B /* Security.framework */,
+				07BA1D301CE87C2B00A92C4B /* CFNetwork.framework */,
+				07BA1D2E1CE87C1F00A92C4B /* libicucore.tbd */,
+				07BA1D2C1CE87C1100A92C4B /* libc++.tbd */,
 				07BBFF691CE6C81E00A2AAEE /* CoreData.framework */,
 				D8219F72C26384A2ABBFCEEA /* libPods-DaycareManager.a */,
 			);
@@ -360,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07BA1D071CE7CE6B00A92C4B /* LoginViewController.swift in Sources */,
+				07BA1D381CE87C9B00A92C4B /* DataService.swift in Sources */,
 				07BA1D0E1CE7F6C900A92C4B /* Constants.swift in Sources */,
 				07BA1D101CE806AC00A92C4B /* MaterialButton.swift in Sources */,
 				07BBFF531CE6AE5600A2AAEE /* ViewController.swift in Sources */,
@@ -437,6 +473,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "DaycareManager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -474,6 +511,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "DaycareManager-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

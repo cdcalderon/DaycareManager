@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        MagicalRecord.setupCoreDataStackWithStoreNamed("DaycareManager");
+        //MagicalRecord.setupCoreDataStackWithStoreNamed("DaycareManager");
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
