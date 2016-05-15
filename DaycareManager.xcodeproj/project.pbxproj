@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010037CDFE629837A9CA1539 /* libPods-DaycareManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 072355234D11C60BC7B669F3 /* libPods-DaycareManager.a */; };
 		07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */; };
 		07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */; };
 		07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */; };
@@ -23,6 +22,9 @@
 		07BA1D0E1CE7F6C900A92C4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D0D1CE7F6C900A92C4B /* Constants.swift */; };
 		07BA1D101CE806AC00A92C4B /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D0F1CE806AC00A92C4B /* MaterialButton.swift */; };
 		07BA1D121CE80B7A00A92C4B /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D111CE80B7A00A92C4B /* MaterialTextField.swift */; };
+		07BA1D171CE838E700A92C4B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D141CE838E700A92C4B /* FBSDKLoginKit.framework */; };
+		07BA1D181CE838E700A92C4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D151CE838E700A92C4B /* Bolts.framework */; };
+		07BA1D191CE838E700A92C4B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D161CE838E700A92C4B /* FBSDKCoreKit.framework */; };
 		07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */; };
 		07BBFF531CE6AE5600A2AAEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF521CE6AE5600A2AAEE /* ViewController.swift */; };
 		07BBFF561CE6AE5600A2AAEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BBFF541CE6AE5600A2AAEE /* Main.storyboard */; };
@@ -35,10 +37,10 @@
 		07BBFF7A1CE6CFDD00A2AAEE /* Parent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF761CE6CFDD00A2AAEE /* Parent+CoreDataProperties.swift */; };
 		07BBFF7B1CE6CFDD00A2AAEE /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF771CE6CFDD00A2AAEE /* Parent.swift */; };
 		07BBFF841CE6E96E00A2AAEE /* DMRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF831CE6E96E00A2AAEE /* DMRecord.m */; };
+		0EEF3F849228D5275D69570A /* libPods-DaycareManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8219F72C26384A2ABBFCEEA /* libPods-DaycareManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		072355234D11C60BC7B669F3 /* libPods-DaycareManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaycareManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -54,6 +56,10 @@
 		07BA1D0D1CE7F6C900A92C4B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		07BA1D0F1CE806AC00A92C4B /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		07BA1D111CE80B7A00A92C4B /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		07BA1D141CE838E700A92C4B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		07BA1D151CE838E700A92C4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		07BA1D161CE838E700A92C4B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		07BA1D201CE8401F00A92C4B /* DaycareManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaycareManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		07BBFF4D1CE6AE5600A2AAEE /* DaycareManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaycareManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BBFF521CE6AE5600A2AAEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,11 +73,11 @@
 		07BBFF751CE6CFDD00A2AAEE /* Kid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
 		07BBFF761CE6CFDD00A2AAEE /* Parent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parent+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		07BBFF771CE6CFDD00A2AAEE /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
-		07BBFF811CE6E96E00A2AAEE /* DaycareManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaycareManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		07BBFF821CE6E96E00A2AAEE /* DMRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecord.h; sourceTree = "<group>"; };
 		07BBFF831CE6E96E00A2AAEE /* DMRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecord.m; sourceTree = "<group>"; };
 		33208A5A1B70B0923A7D6DA4 /* Pods-DaycareManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaycareManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaycareManager/Pods-DaycareManager.release.xcconfig"; sourceTree = "<group>"; };
 		779CE410314EE5630F38F0AD /* Pods-DaycareManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaycareManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaycareManager/Pods-DaycareManager.debug.xcconfig"; sourceTree = "<group>"; };
+		D8219F72C26384A2ABBFCEEA /* libPods-DaycareManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaycareManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BA1D191CE838E700A92C4B /* FBSDKCoreKit.framework in Frameworks */,
 				07BBFF6A1CE6C81E00A2AAEE /* CoreData.framework in Frameworks */,
-				010037CDFE629837A9CA1539 /* libPods-DaycareManager.a in Frameworks */,
+				07BA1D171CE838E700A92C4B /* FBSDKLoginKit.framework in Frameworks */,
+				07BA1D181CE838E700A92C4B /* Bolts.framework in Frameworks */,
+				0EEF3F849228D5275D69570A /* libPods-DaycareManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,16 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		07BA1D131CE838B500A92C4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07BA1D141CE838E700A92C4B /* FBSDKLoginKit.framework */,
+				07BA1D151CE838E700A92C4B /* Bolts.framework */,
+				07BA1D161CE838E700A92C4B /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		07BBFF441CE6AE5600A2AAEE = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +152,7 @@
 		07BBFF4F1CE6AE5600A2AAEE /* DaycareManager */ = {
 			isa = PBXGroup;
 			children = (
+				07BA1D131CE838B500A92C4B /* Frameworks */,
 				07BA1D0A1CE7F5F300A92C4B /* Util */,
 				07BA1CF11CE7C5CC00A92C4B /* Resources */,
 				07BBFF651CE6C78300A2AAEE /* Views */,
@@ -143,7 +163,7 @@
 				07BBFF5C1CE6AE5600A2AAEE /* Info.plist */,
 				07BBFF821CE6E96E00A2AAEE /* DMRecord.h */,
 				07BBFF831CE6E96E00A2AAEE /* DMRecord.m */,
-				07BBFF811CE6E96E00A2AAEE /* DaycareManager-Bridging-Header.h */,
+				07BA1D201CE8401F00A92C4B /* DaycareManager-Bridging-Header.h */,
 			);
 			path = DaycareManager;
 			sourceTree = "<group>";
@@ -193,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				07BBFF691CE6C81E00A2AAEE /* CoreData.framework */,
-				072355234D11C60BC7B669F3 /* libPods-DaycareManager.a */,
+				D8219F72C26384A2ABBFCEEA /* libPods-DaycareManager.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -464,6 +484,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaycareManager",
+				);
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = DaycareManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +505,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaycareManager",
+				);
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = DaycareManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

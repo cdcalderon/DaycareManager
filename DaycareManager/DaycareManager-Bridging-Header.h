@@ -1,6 +1,13 @@
 //
-//  Use this file to import your target's public headers that you would like to expose to Swift.
+//  DaycareManager-Bridging-Header.h
+//  DaycareManager
 //
+//  Created by carlos calderon on 5/15/16.
+//  Copyright © 2016 carlos calderon. All rights reserved.
+//
+
+#ifndef DaycareManager_Bridging_Header_h
+#define DaycareManager_Bridging_Header_h
 
 #import "DMRecord.h"
 #import <MMRecord/MMRecord.h>
@@ -10,6 +17,6 @@
 #import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
 
 #import <MagicalRecord/NSPersistentStoreCoordinator+MagicalRecord.h>
-//#import <MagicalRecord/MagicalRecordShorthandMethodAliases.h>
 
 
+#endif /* DaycareManager_Bridging_Header_h */
