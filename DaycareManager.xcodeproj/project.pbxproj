@@ -32,6 +32,7 @@
 		07BA1D331CE87C3600A92C4B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D321CE87C3600A92C4B /* Security.framework */; };
 		07BA1D351CE87C4000A92C4B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BA1D341CE87C4000A92C4B /* SystemConfiguration.framework */; };
 		07BA1D381CE87C9B00A92C4B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D371CE87C9B00A92C4B /* DataService.swift */; };
+		07BA1D3A1CEA806400A92C4B /* AddKidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1D391CEA806400A92C4B /* AddKidViewController.swift */; };
 		07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */; };
 		07BBFF531CE6AE5600A2AAEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF521CE6AE5600A2AAEE /* ViewController.swift */; };
 		07BBFF561CE6AE5600A2AAEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BBFF541CE6AE5600A2AAEE /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		07BA1D321CE87C3600A92C4B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		07BA1D341CE87C4000A92C4B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		07BA1D371CE87C9B00A92C4B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		07BA1D391CEA806400A92C4B /* AddKidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKidViewController.swift; sourceTree = "<group>"; };
 		07BBFF4D1CE6AE5600A2AAEE /* DaycareManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaycareManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BBFF501CE6AE5600A2AAEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BBFF521CE6AE5600A2AAEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				07BA1D081CE7EE6100A92C4B /* MaterialView.swift */,
 				07BA1D0F1CE806AC00A92C4B /* MaterialButton.swift */,
 				07BA1D111CE80B7A00A92C4B /* MaterialTextField.swift */,
+				07BA1D391CEA806400A92C4B /* AddKidViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				07BA1D091CE7EE6100A92C4B /* MaterialView.swift in Sources */,
 				07BA1D121CE80B7A00A92C4B /* MaterialTextField.swift in Sources */,
 				07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */,
+				07BA1D3A1CEA806400A92C4B /* AddKidViewController.swift in Sources */,
 				07BBFF7B1CE6CFDD00A2AAEE /* Parent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -219,7 +219,7 @@
                     <connections>
                         <outlet property="emailField" destination="Ha9-Ak-R4d" id="9Kr-yL-ulx"/>
                         <outlet property="passwordField" destination="YI0-bQ-O8G" id="Gj4-64-PNa"/>
-                        <segue destination="spP-Lc-wHM" kind="show" identifier="loggedin" id="kDG-m6-FVy"/>
+                        <segue destination="mXT-5W-QTu" kind="show" identifier="loggedin" id="kDG-m6-FVy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxP-Tb-Sym" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,10 +237,95 @@
                     <view key="view" contentMode="scaleToFill" id="xDw-C4-ob1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ueg-3p-2aQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="spw-yL-pnt">
+                            <connections>
+                                <segue destination="IL5-zV-nOY" kind="show" identifier="addparentandkids" id="n1N-Se-weS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rkc-OC-kLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2193" y="1156"/>
+        </scene>
+        <!--Add Kid View Controller-->
+        <scene sceneID="iwZ-jo-zPm">
+            <objects>
+                <viewController id="IL5-zV-nOY" customClass="AddKidViewController" customModule="DaycareManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="khS-TY-7PI"/>
+                        <viewControllerLayoutGuide type="bottom" id="TDB-fI-h0O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="14x-Ca-1qs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEW-Q2-9iN">
+                                <rect key="frame" x="20" y="85" width="236" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-bM-VhR">
+                                <rect key="frame" x="20" y="123" width="236" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psq-yB-aH2">
+                                <rect key="frame" x="181" y="161" width="75" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-UX-QBX">
+                                <rect key="frame" x="276" y="161" width="75" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-bo-Ma7">
+                                <rect key="frame" x="370" y="161" width="75" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcq-J8-i83">
+                                <rect key="frame" x="170" y="240" width="260" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveKidButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="WoI-Mb-DWh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dayTextField" destination="cl1-UX-QBX" id="Rg8-yw-Q9Y"/>
+                        <outlet property="firstNameTextField" destination="nEW-Q2-9iN" id="Twe-Ow-R97"/>
+                        <outlet property="lastNameTextField" destination="Xaa-bM-VhR" id="XNV-Ku-621"/>
+                        <outlet property="monthTextField" destination="psq-yB-aH2" id="5U1-do-1We"/>
+                        <outlet property="yearTextField" destination="eJO-bo-Ma7" id="hig-us-I4c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5jW-Z4-Why" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2870" y="1156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b4A-Iz-FjL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mXT-5W-QTu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cX7-D7-1Ol"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="28c-yc-wPk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="spP-Lc-wHM" kind="relationship" relationship="rootViewController" id="wTw-t9-fcX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhN-jW-wEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1381" y="1156"/>
         </scene>
