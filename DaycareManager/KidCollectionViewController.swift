@@ -60,6 +60,7 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
         let kid = kidsArray[indexPath.row]
         print("OBJECT : \(kid.firstName) - \(kid.lastName) ")
         
+        cell.renderCell(kid)
 //        let thisItem = kidsArray[indexPath.row] as Kid
 //        
 //        cell.imageView.image = UIImage(data: thisItem.image)
