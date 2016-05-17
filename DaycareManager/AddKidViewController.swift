@@ -10,6 +10,7 @@ import UIKit
 
 class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate , CLUploaderDelegate{
 
+    //kid
     @IBOutlet weak var firstNameTextField: UITextField!
     
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -20,8 +21,17 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var yearTextField: UITextField!
     
-    
     @IBOutlet weak var selectedImage: UIImageView!
+    
+    //dad
+    @IBOutlet weak var dadFirstNameTextField: UITextField!
+    
+    @IBOutlet weak var dadLastNameTextField: UITextField!
+    
+    //mom
+    @IBOutlet weak var momFirstNameTextField: UITextField!
+    
+    @IBOutlet weak var momLastNameTextField: UITextField!
     
     
     var imagePicker: UIImagePickerController!
@@ -34,7 +44,7 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func saveKidButtonPressed(sender: UIButton) {
-        self.saveKidToFirebase(nil)
+        self.saveKidToFirebase()
     }
     
     @IBAction func addKidImageButtonPressed(sender: UIButton) {
@@ -43,11 +53,8 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
-    func saveKidToFirebase(imgUrl: String?) {
-        var kid: Dictionary<String, AnyObject> = [
-            "firstName": firstNameTextField.text!,
-            "lastName": lastNameTextField.text!
-        ]
+    func saveKidToFirebase() {
+        
         
        // let cloudinary_url = "cloudinary://686262751217777:5qSCCtXQ45SHWF-dUeNi7JkpwZY@carlos-calderon"
         let cloudinary: CLCloudinary = CLCloudinary()
@@ -60,20 +67,76 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         uploader.upload(UIImageJPEGRepresentation(selectedImage.image!, 0.8), options: ["format":"jpg"], withCompletion: { sucessResult, error, code, context in
             print("DONE IMAGE")
+            let kid:[String:AnyObject]
+            let firebaseKid = DataService.ds.REF_KIDS.childByAutoId()
+            if let firstName = self.firstNameTextField.text where !self.firstNameTextField.text!.isEmpty,
+               let lastName = self.lastNameTextField.text where !self.lastNameTextField.text!.isEmpty,
+               let imageUrl = sucessResult["url"] where sucessResult["url"] != nil
+            {
+                 kid = [
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "imageUrl": imageUrl
+                ]
+                firebaseKid.setValue(kid)
+                self.firstNameTextField.text = ""
+                self.lastNameTextField.text = ""
+            }
+            
+            
+            
+            if let dadFirstName = self.dadFirstNameTextField.text where !self.dadFirstNameTextField.text!.isEmpty,
+               let dadLastName =  self.dadLastNameTextField.text where  !self.dadLastNameTextField.text!.isEmpty{
+                let parentDad: Dictionary<String, AnyObject> = [
+                    "firstName": dadFirstName,
+                    "lastName": dadLastName,
+                    "relationship": "father"
+                ]
+                //save parent
+                let firebaseParentDad = DataService.ds.REF_PARENTS.childByAutoId()
+                firebaseParentDad.setValue(parentDad)
+                self.dadFirstNameTextField.text = ""
+                self.dadLastNameTextField.text = ""
+                
+                //save kid to parent's kids
+                let firebaseParentDadKids = DataService.ds.REF_PARENTS.childByAppendingPath(firebaseParentDad.key).childByAppendingPath("kids")
+                let parentDadKid = [firebaseKid.key: true];
+                firebaseParentDadKids.setValue(parentDadKid)
+                
+            }
+            
+            if let momFirstName = self.momFirstNameTextField.text where !self.momFirstNameTextField.text!.isEmpty,
+               let momLastName =  self.momLastNameTextField.text where !self.momLastNameTextField.text!.isEmpty{
+                let parentMom: Dictionary<String, AnyObject> = [
+                    "firstName": momFirstName,
+                    "lastName": momLastName,
+                    "relationship": "mother"
+                ]
+                
+                let firebaseParentMom = DataService.ds.REF_PARENTS.childByAutoId()
+                firebaseParentMom.setValue(parentMom)
+                self.momFirstNameTextField.text = ""
+                self.momLastNameTextField.text = ""
+                
+                //save kid to parent's kids
+                let firebaseParentMomKids = DataService.ds.REF_PARENTS.childByAppendingPath(firebaseParentMom.key).childByAppendingPath("kids")
+                let parentMomKid = [firebaseKid.key: true];
+                firebaseParentMomKids.setValue(parentMomKid)
+                
+            }
+            
             }) { (p1, p2, p3,p4) in
                 
         }
         
         
-        if imgUrl != nil {
-            kid["imageUrl"] = imgUrl!
-        }
+//        if imgUrl != nil {
+//            kid["imageUrl"] = imgUrl!
+//        }
         
-        let firebaseKid = DataService.ds.REF_KIDS.childByAutoId()
-        firebaseKid.setValue(kid)
+       
         
-        firstNameTextField.text = ""
-        lastNameTextField.text = ""
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {

@@ -289,7 +289,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcq-J8-i83">
-                                <rect key="frame" x="170" y="240" width="260" height="30"/>
+                                <rect key="frame" x="170" y="550" width="260" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveKidButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="WoI-Mb-DWh"/>
@@ -303,15 +303,51 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EY5-u9-MlH">
-                                <rect key="frame" x="117" y="335" width="393" height="210"/>
+                                <rect key="frame" x="397" y="246" width="150" height="93"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZT2-8g-nuL">
+                                <rect key="frame" x="61" y="401" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-P9-otY">
+                                <rect key="frame" x="61" y="446" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zb-GR-aFK">
+                                <rect key="frame" x="355" y="401" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNN-fs-zHF">
+                                <rect key="frame" x="355" y="446" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZG-JS-Z4N">
+                                <rect key="frame" x="125" y="364" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-K0-ypi">
+                                <rect key="frame" x="419" y="364" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="dadFirstNameTextField" destination="ZT2-8g-nuL" id="hmU-lw-ZSd"/>
+                        <outlet property="dadLastNameTextField" destination="VvL-P9-otY" id="mdM-lg-12u"/>
                         <outlet property="dayTextField" destination="cl1-UX-QBX" id="Rg8-yw-Q9Y"/>
                         <outlet property="firstNameTextField" destination="nEW-Q2-9iN" id="Twe-Ow-R97"/>
                         <outlet property="lastNameTextField" destination="Xaa-bM-VhR" id="XNV-Ku-621"/>
+                        <outlet property="momFirstNameTextField" destination="3zb-GR-aFK" id="xUP-ci-Zdt"/>
+                        <outlet property="momLastNameTextField" destination="rNN-fs-zHF" id="3Y0-pQ-Tcj"/>
                         <outlet property="monthTextField" destination="psq-yB-aH2" id="5U1-do-1We"/>
                         <outlet property="selectedImage" destination="EY5-u9-MlH" id="xQP-c9-cfq"/>
                         <outlet property="yearTextField" destination="eJO-bo-Ma7" id="hig-us-I4c"/>

@@ -14,9 +14,10 @@ let URL_BASE = "https://daycaremg.firebaseio.com"
 class DataService {
     static let ds = DataService()
     
-    private var _REF_BASE = Firebase(url: "\(URL_BASE)")
-    private var _REF_USERS = Firebase(url: "\(URL_BASE)/users")
-    private var _REF_KIDS = Firebase(url: "\(URL_BASE)/kids")
+    private var _REF_BASE    =  Firebase(url: "\(URL_BASE)")
+    private var _REF_USERS   =  Firebase(url: "\(URL_BASE)/users")
+    private var _REF_KIDS    =  Firebase(url: "\(URL_BASE)/kids")
+    private var _REF_PARENTS =  Firebase(url: "\(URL_BASE)/parents")
     
     var REF_BASE: Firebase {
         return _REF_BASE
@@ -28,6 +29,18 @@ class DataService {
     
     var REF_KIDS: Firebase {
         return _REF_KIDS
+    }
+    
+    var REF_PARENTS: Firebase {
+        return _REF_PARENTS
+    }
+    
+    var REF_USER_CURRENT: Firebase {
+        let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
+        
+        let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("users").childByAppendingPath(uid)
+        
+        return user!
     }
     
     func createFirebaseUser(uid: String, user: Dictionary<String, String>) {
