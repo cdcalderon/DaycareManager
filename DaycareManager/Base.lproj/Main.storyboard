@@ -295,6 +295,16 @@
                                     <action selector="saveKidButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="WoI-Mb-DWh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-Eb-ffP">
+                                <rect key="frame" x="32" y="207" width="115" height="30"/>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="addKidImageButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="xf6-0q-sHc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EY5-u9-MlH">
+                                <rect key="frame" x="117" y="335" width="393" height="210"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -303,6 +313,7 @@
                         <outlet property="firstNameTextField" destination="nEW-Q2-9iN" id="Twe-Ow-R97"/>
                         <outlet property="lastNameTextField" destination="Xaa-bM-VhR" id="XNV-Ku-621"/>
                         <outlet property="monthTextField" destination="psq-yB-aH2" id="5U1-do-1We"/>
+                        <outlet property="selectedImage" destination="EY5-u9-MlH" id="xQP-c9-cfq"/>
                         <outlet property="yearTextField" destination="eJO-bo-Ma7" id="hig-us-I4c"/>
                     </connections>
                 </viewController>

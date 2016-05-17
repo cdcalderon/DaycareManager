@@ -11,6 +11,7 @@
 
 #import "DMRecord.h"
 #import <MMRecord/MMRecord.h>
+#import "Cloudinary/Cloudinary.h"
 
 
 #import <MagicalRecord/MagicalRecord.h>
