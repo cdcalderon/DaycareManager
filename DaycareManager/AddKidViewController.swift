@@ -103,6 +103,12 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                 let parentDadKid = [firebaseKid.key: true];
                 firebaseParentDadKids.setValue(parentDadKid)
                 
+                //add parent to kid's parent object
+                let firebaseKidParentsDad = DataService.ds.REF_KIDS.childByAppendingPath(firebaseKid.key).childByAppendingPath("parents")
+                let dadOfKid = [firebaseParentDad.key: true]
+                firebaseKidParentsDad.updateChildValues(dadOfKid)
+                
+                
             }
             
             if let momFirstName = self.momFirstNameTextField.text where !self.momFirstNameTextField.text!.isEmpty,
@@ -122,6 +128,11 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                 let firebaseParentMomKids = DataService.ds.REF_PARENTS.childByAppendingPath(firebaseParentMom.key).childByAppendingPath("kids")
                 let parentMomKid = [firebaseKid.key: true];
                 firebaseParentMomKids.setValue(parentMomKid)
+                
+                //add parent to kid's parent object
+                let firebaseKidParentsMom = DataService.ds.REF_KIDS.childByAppendingPath(firebaseKid.key).childByAppendingPath("parents")
+                let momOfKid = [firebaseParentMom.key: true]
+                firebaseKidParentsMom.updateChildValues(momOfKid)
                 
             }
             

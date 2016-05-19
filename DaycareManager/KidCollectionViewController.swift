@@ -55,17 +55,32 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        var cell: KidCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! KidCell
+        let cell: KidCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! KidCell
         
         let kid = kidsArray[indexPath.row]
         print("OBJECT : \(kid.firstName) - \(kid.lastName) ")
         
         cell.renderCell(kid)
-//        let thisItem = kidsArray[indexPath.row] as Kid
-//        
-//        cell.imageView.image = UIImage(data: thisItem.image)
-//        cel.captionLabel.text = thisItem.caption
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("checkinkid", sender: self)
+        
+        //performSegueWithIdentifier("checkinkid", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "checkinkid" {
+            let indexPaths = self.kidCollectionView!.indexPathsForSelectedItems()!
+            let indexPath = indexPaths[0] as NSIndexPath
+            
+            let kidCheckInOutVC = segue.destinationViewController as! KidCheckInOutController
+            kidCheckInOutVC.kid = kidsArray[indexPath.row]
+            
+        }
+
     }
 }

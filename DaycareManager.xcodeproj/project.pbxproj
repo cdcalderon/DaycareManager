@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07641DF21CED1370004EB176 /* KidCheckInOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07641DF11CED1370004EB176 /* KidCheckInOutController.swift */; };
 		07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */; };
 		07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */; };
 		07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07641DF11CED1370004EB176 /* KidCheckInOutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidCheckInOutController.swift; sourceTree = "<group>"; };
 		07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				07BA1D391CEA806400A92C4B /* AddKidViewController.swift */,
 				07BA1D3D1CEAF02E00A92C4B /* KidCell.swift */,
 				07BA1D3F1CEAF36900A92C4B /* KidCollectionViewController.swift */,
+				07641DF11CED1370004EB176 /* KidCheckInOutController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				07BA1D071CE7CE6B00A92C4B /* LoginViewController.swift in Sources */,
 				07BA1D381CE87C9B00A92C4B /* DataService.swift in Sources */,
 				07BA1D0E1CE7F6C900A92C4B /* Constants.swift in Sources */,
+				07641DF21CED1370004EB176 /* KidCheckInOutController.swift in Sources */,
 				07BA1D101CE806AC00A92C4B /* MaterialButton.swift in Sources */,
 				07BA1D401CEAF36900A92C4B /* KidCollectionViewController.swift in Sources */,
 				07BA1D3E1CEAF02E00A92C4B /* KidCell.swift in Sources */,
