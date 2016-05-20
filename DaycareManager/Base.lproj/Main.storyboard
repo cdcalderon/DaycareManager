@@ -92,7 +92,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-tB-eD8">
                                                 <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-gw-DOR" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-gw-DOR" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="37" width="415" height="34"/>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
@@ -421,6 +421,9 @@
                                 <rect key="frame" x="390" y="463" width="143" height="117"/>
                                 <color key="backgroundColor" red="1" green="0.38758765640452852" blue="0.045895402279243047" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Check Out"/>
+                                <connections>
+                                    <action selector="checkOutButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="rtx-01-78m"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who is Checking In ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1r-lS-lxw">
                                 <rect key="frame" x="221" y="236" width="172" height="21"/>
@@ -428,21 +431,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nW2-18-Dae">
-                                <rect key="frame" x="27" y="273" width="131" height="104"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUS-m4-7bE">
-                                <rect key="frame" x="235" y="273" width="131" height="104"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-dw-mHR">
-                                <rect key="frame" x="425" y="273" width="116" height="104"/>
-                                <color key="backgroundColor" red="0.83177457206854744" green="1" blue="0.87264076106678301" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Other"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCw-Af-GDL">
                                 <rect key="frame" x="93" y="463" width="143" height="117"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Check In"/>
+                                <connections>
+                                    <action selector="checkInButtomPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="wss-4h-7uE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALw-TP-fd2">
                                 <rect key="frame" x="20" y="177" width="560" height="21"/>
@@ -450,12 +445,45 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-CU-o7o">
+                                <rect key="frame" x="235" y="385" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDu-nL-HxZ">
+                                <rect key="frame" x="27" y="385" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-HO-3M2">
+                                <rect key="frame" x="20" y="288" width="116" height="96.5"/>
+                                <state key="normal" backgroundImage="female-placeholder.png"/>
+                                <connections>
+                                    <action selector="momButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="Bab-aE-4WM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-mM-KI1">
+                                <rect key="frame" x="203" y="288" width="116" height="96.5"/>
+                                <state key="normal" backgroundImage="male-placeholder.png"/>
+                                <connections>
+                                    <action selector="dadButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="m9Z-7V-I3n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-dw-mHR">
+                                <rect key="frame" x="374" y="285" width="116" height="104"/>
+                                <color key="backgroundColor" red="0.83177457206854744" green="1" blue="0.87264076106678301" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Other"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="dadNameLabel" destination="Uwo-CU-o7o" id="wnh-UL-JPg"/>
                         <outlet property="kidImageView" destination="ql7-K6-oWc" id="Ttb-Vy-NqF"/>
                         <outlet property="kidNameLabel" destination="ALw-TP-fd2" id="DLn-Dp-SCH"/>
+                        <outlet property="momNameLabel" destination="qDu-nL-HxZ" id="xu3-N7-csl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMv-4B-cXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -484,6 +512,8 @@
     </scenes>
     <resources>
         <image name="fb-icon.png" width="65" height="65"/>
+        <image name="female-placeholder.png" width="800" height="600"/>
         <image name="logosingle.png" width="317" height="309"/>
+        <image name="male-placeholder.png" width="622" height="415"/>
     </resources>
 </document>

@@ -105,7 +105,7 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                 
                 //add parent to kid's parent object
                 let firebaseKidParentsDad = DataService.ds.REF_KIDS.childByAppendingPath(firebaseKid.key).childByAppendingPath("parents")
-                let dadOfKid = [firebaseParentDad.key: true]
+                let dadOfKid = [firebaseParentDad.key: "dad"]
                 firebaseKidParentsDad.updateChildValues(dadOfKid)
                 
                 
@@ -131,7 +131,7 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                 
                 //add parent to kid's parent object
                 let firebaseKidParentsMom = DataService.ds.REF_KIDS.childByAppendingPath(firebaseKid.key).childByAppendingPath("parents")
-                let momOfKid = [firebaseParentMom.key: true]
+                let momOfKid = [firebaseParentMom.key: "mom"]
                 firebaseKidParentsMom.updateChildValues(momOfKid)
                 
             }

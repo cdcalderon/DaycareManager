@@ -14,6 +14,7 @@ class DMKid {
     private var _lastName: String!
     private var _imageUrl: String!
     private var _kidKey: String!
+    private var _parents: Dictionary<String, String> = [:]
     
     var firstName: String {
         return _firstName
@@ -27,14 +28,19 @@ class DMKid {
         return _imageUrl
     }
     
-    var postKey: String {
+    var kidKey: String {
         return _kidKey
     }
     
-    init(firstName: String, lastName: String, imageUrl: String) {
+    var parents: Dictionary<String, String> {
+        return _parents
+    }
+    
+    init(firstName: String, lastName: String, imageUrl: String, kidParents: Dictionary<String, String>) {
         self._firstName = firstName
         self._lastName = lastName
         self._imageUrl = imageUrl
+        self._parents = kidParents
     }
     
     init(kidKey: String, dictionary: Dictionary<String, AnyObject>) {
@@ -50,6 +56,10 @@ class DMKid {
         
         if let imageUrl = dictionary["imageUrl"] as? String {
             self._imageUrl = imageUrl
+        }
+        
+        if let kidparents = dictionary["parents"] as? Dictionary<String, String> {
+            self._parents = kidparents
         }
     }
 }

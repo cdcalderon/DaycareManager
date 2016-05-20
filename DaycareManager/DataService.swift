@@ -18,6 +18,7 @@ class DataService {
     private var _REF_USERS   =  Firebase(url: "\(URL_BASE)/users")
     private var _REF_KIDS    =  Firebase(url: "\(URL_BASE)/kids")
     private var _REF_PARENTS =  Firebase(url: "\(URL_BASE)/parents")
+    private var _REF_CHECK_ACTION =  Firebase(url: "\(URL_BASE)/checkAction")
     
     var REF_BASE: Firebase {
         return _REF_BASE
@@ -33,6 +34,11 @@ class DataService {
     
     var REF_PARENTS: Firebase {
         return _REF_PARENTS
+    }
+    
+    
+    var REF_CHECK_ACTION: Firebase {
+        return _REF_CHECK_ACTION
     }
     
     var REF_USER_CURRENT: Firebase {
