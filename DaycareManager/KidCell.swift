@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class KidCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
     
-    func renderCell(kid: DMKid) {
+    func renderCell(kid: DMKid, checkActions:[[String:AnyObject]]) {
         
         let url = NSURL(string: kid.imageUrl)
         self.captionLabel.text = "\(kid.firstName) \(kid.lastName)"
@@ -25,5 +26,21 @@ class KidCell: UICollectionViewCell {
             });
         }
         
+        if checkActions.count > 0 {
+            
+            for checkAction in checkActions {
+                
+                for (key, value) in checkAction {
+                    
+                    if key == "kid" {
+                        if value as! String == kid.kidKey {
+                            print("\(kid.kidKey) -- nino en check in state")
+                        }
+                    }
+                }
+            }
+            
+        }
     }
+    
 }

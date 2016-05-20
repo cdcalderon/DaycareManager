@@ -88,6 +88,7 @@ class KidCheckInOutController: UIViewController {
             "year": todayDate.year,
             "hour": todayDate.hour,
             "minute": todayDate.minute,
+            "fulldate": "\(todayDate.month)-\(todayDate.day)-\(todayDate.year)",
             "action": "checkin",
             "kid": self.kid.kidKey,
             "parent": self.selectedParentId!
@@ -105,6 +106,7 @@ class KidCheckInOutController: UIViewController {
             "month": todayDate.month,
             "year": todayDate.year,
             "hour": todayDate.hour,
+            "fulldate": "\(todayDate.month)-\(todayDate.day)-\(todayDate.year)",
             "minute": todayDate.minute,
             "action": "checkout",
             "kid": self.kid.kidKey,
@@ -122,6 +124,7 @@ class KidCheckInOutController: UIViewController {
     @IBAction func dadButtonPressed(sender: AnyObject) {
         self.selectedParentId = self.currentParentDadId
     }
+    
     func getTodayDate() -> (day: Int, month: Int, hour: Int, minute: Int, year: Int){
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()

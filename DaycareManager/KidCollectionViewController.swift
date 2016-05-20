@@ -14,9 +14,11 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var kidCollectionView: UICollectionView!
     
     var kidsArray = [DMKid]()
-    
+    var checkActions = [[String:AnyObject]]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let todayDate = getTodayDate()
         
         DataService.ds.REF_KIDS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot)
@@ -39,6 +41,23 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
             self.kidCollectionView.reloadData()
         })
         
+        DataService.ds.REF_CHECK_ACTION.queryOrderedByChild("fulldate").queryEqualToValue("\(todayDate.month)-\(todayDate.day)-\(todayDate.year)")
+            .observeEventType(.Value, withBlock: { snapshot in
+                print(snapshot)
+                self.checkActions = []
+                if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                    
+                    for snap in snapshots {
+                        print("SNAP:  \(snap)")
+                        
+                        if let checkAction = snap.value as? Dictionary<String, AnyObject> {
+                            self.checkActions.append(checkAction)
+                        }
+                    }
+                }
+                
+                self.kidCollectionView.reloadData()
+            })
         
     }
     
@@ -60,7 +79,7 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
         let kid = kidsArray[indexPath.row]
         print("OBJECT : \(kid.firstName) - \(kid.lastName) ")
         
-        cell.renderCell(kid)
+        cell.renderCell(kid, checkActions: self.checkActions)
         
         return cell
     }
@@ -82,5 +101,19 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
             
         }
 
+    }
+    
+    func getTodayDate() -> (day: Int, month: Int, hour: Int, minute: Int, year: Int){
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day , .Month , .Year, .Hour, .Minute], fromDate: date)
+        
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+        let hr = components.hour
+        let min = components.minute
+        
+        return (day, month, hr, min, year)
     }
 }
