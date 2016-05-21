@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		07641DF21CED1370004EB176 /* KidCheckInOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07641DF11CED1370004EB176 /* KidCheckInOutController.swift */; };
-		0770148C1CEED05D0018E2CA /* male-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770148A1CEED05D0018E2CA /* male-placeholder.png */; };
-		0770148D1CEED05D0018E2CA /* female-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770148B1CEED05D0018E2CA /* female-placeholder.png */; };
+		0770148F1CF090D40018E2CA /* checkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770148E1CF090D40018E2CA /* checkedin.png */; };
+		077014911CF09D050018E2CA /* checkedout.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014901CF09D050018E2CA /* checkedout.png */; };
+		077014931CF09E240018E2CA /* checkedoutround.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014921CF09E240018E2CA /* checkedoutround.png */; };
+		0770149A1CF0B36B0018E2CA /* female-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014941CF0B36B0018E2CA /* female-placeholder.png */; };
+		0770149C1CF0B36B0018E2CA /* male-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014961CF0B36B0018E2CA /* male-placeholder.png */; };
+		0770149E1CF0B36B0018E2CA /* othercheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014981CF0B36B0018E2CA /* othercheck.png */; };
+		0770149F1CF0B36B0018E2CA /* othercheckchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014991CF0B36B0018E2CA /* othercheckchecked.png */; };
+		077014A11CF0BA120018E2CA /* female-placeholderchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014A01CF0BA120018E2CA /* female-placeholderchecked.png */; };
+		077014A31CF0BC1D0018E2CA /* male-placeholderchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014A21CF0BC1D0018E2CA /* male-placeholderchecked.png */; };
+		077014A51CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */; };
 		07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */; };
 		07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */; };
 		07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */; };
@@ -56,8 +64,16 @@
 
 /* Begin PBXFileReference section */
 		07641DF11CED1370004EB176 /* KidCheckInOutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidCheckInOutController.swift; sourceTree = "<group>"; };
-		0770148A1CEED05D0018E2CA /* male-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-placeholder.png"; sourceTree = "<group>"; };
-		0770148B1CEED05D0018E2CA /* female-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-placeholder.png"; sourceTree = "<group>"; };
+		0770148E1CF090D40018E2CA /* checkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkedin.png; sourceTree = "<group>"; };
+		077014901CF09D050018E2CA /* checkedout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkedout.png; sourceTree = "<group>"; };
+		077014921CF09E240018E2CA /* checkedoutround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkedoutround.png; sourceTree = "<group>"; };
+		077014941CF0B36B0018E2CA /* female-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-placeholder.png"; sourceTree = "<group>"; };
+		077014961CF0B36B0018E2CA /* male-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-placeholder.png"; sourceTree = "<group>"; };
+		077014981CF0B36B0018E2CA /* othercheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = othercheck.png; sourceTree = "<group>"; };
+		077014991CF0B36B0018E2CA /* othercheckchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = othercheckchecked.png; sourceTree = "<group>"; };
+		077014A01CF0BA120018E2CA /* female-placeholderchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-placeholderchecked.png"; sourceTree = "<group>"; };
+		077014A21CF0BC1D0018E2CA /* male-placeholderchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-placeholderchecked.png"; sourceTree = "<group>"; };
+		077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherCheckRelativeViewController.swift; sourceTree = "<group>"; };
 		07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -133,8 +149,15 @@
 		07BA1CF11CE7C5CC00A92C4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0770148A1CEED05D0018E2CA /* male-placeholder.png */,
-				0770148B1CEED05D0018E2CA /* female-placeholder.png */,
+				077014A21CF0BC1D0018E2CA /* male-placeholderchecked.png */,
+				077014A01CF0BA120018E2CA /* female-placeholderchecked.png */,
+				077014941CF0B36B0018E2CA /* female-placeholder.png */,
+				077014961CF0B36B0018E2CA /* male-placeholder.png */,
+				077014981CF0B36B0018E2CA /* othercheck.png */,
+				077014991CF0B36B0018E2CA /* othercheckchecked.png */,
+				077014921CF09E240018E2CA /* checkedoutround.png */,
+				077014901CF09D050018E2CA /* checkedout.png */,
+				0770148E1CF090D40018E2CA /* checkedin.png */,
 				07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */,
 				07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */,
 				07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */,
@@ -245,6 +268,7 @@
 				07BA1D3D1CEAF02E00A92C4B /* KidCell.swift */,
 				07BA1D3F1CEAF36900A92C4B /* KidCollectionViewController.swift */,
 				07641DF11CED1370004EB176 /* KidCheckInOutController.swift */,
+				077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -345,20 +369,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */,
+				0770149A1CF0B36B0018E2CA /* female-placeholder.png in Resources */,
+				077014911CF09D050018E2CA /* checkedout.png in Resources */,
+				077014A11CF0BA120018E2CA /* female-placeholderchecked.png in Resources */,
 				07BBFF5B1CE6AE5600A2AAEE /* LaunchScreen.storyboard in Resources */,
 				07BA1D051CE7C9F000A92C4B /* thumbsUpF.png in Resources */,
+				0770149E1CF0B36B0018E2CA /* othercheck.png in Resources */,
 				07BA1D031CE7C9F000A92C4B /* placeholder-user.png in Resources */,
 				07BA1D021CE7C9F000A92C4B /* logosingle.png in Resources */,
 				07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */,
-				0770148D1CEED05D0018E2CA /* female-placeholder.png in Resources */,
 				07BA1D041CE7C9F000A92C4B /* thumbsUpE.png in Resources */,
+				0770149F1CF0B36B0018E2CA /* othercheckchecked.png in Resources */,
+				077014A31CF0BC1D0018E2CA /* male-placeholderchecked.png in Resources */,
 				07BA1D011CE7C9F000A92C4B /* logocomplete.png in Resources */,
 				07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */,
 				07BA1D001CE7C9F000A92C4B /* fb-icon.png in Resources */,
-				0770148C1CEED05D0018E2CA /* male-placeholder.png in Resources */,
 				07BBFF581CE6AE5600A2AAEE /* Assets.xcassets in Resources */,
+				0770149C1CF0B36B0018E2CA /* male-placeholder.png in Resources */,
 				07BBFF561CE6AE5600A2AAEE /* Main.storyboard in Resources */,
+				0770148F1CF090D40018E2CA /* checkedin.png in Resources */,
 				07BA1CF91CE7C79C00A92C4B /* NotoSans-Regular.ttf in Resources */,
+				077014931CF09E240018E2CA /* checkedoutround.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +464,7 @@
 				07BA1D091CE7EE6100A92C4B /* MaterialView.swift in Sources */,
 				07BA1D121CE80B7A00A92C4B /* MaterialTextField.swift in Sources */,
 				07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */,
+				077014A51CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift in Sources */,
 				07BA1D421CEAFC2A00A92C4B /* DMKid.swift in Sources */,
 				07BA1D3A1CEA806400A92C4B /* AddKidViewController.swift in Sources */,
 				07BBFF7B1CE6CFDD00A2AAEE /* Parent.swift in Sources */,

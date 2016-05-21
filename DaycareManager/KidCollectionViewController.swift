@@ -14,6 +14,7 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var kidCollectionView: UICollectionView!
     
     var kidsArray = [DMKid]()
+    var kidsImages = [String: UIImage]()
     var checkActions = [[String:AnyObject]]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,8 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
         
         let kid = kidsArray[indexPath.row]
         print("OBJECT : \(kid.firstName) - \(kid.lastName) ")
+        cell.imageView.image = nil
+        cell.checkStatusIcon.image = nil
         
         cell.renderCell(kid, checkActions: self.checkActions)
         

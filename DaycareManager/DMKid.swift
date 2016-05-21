@@ -13,8 +13,15 @@ class DMKid {
     private var _firstName: String!
     private var _lastName: String!
     private var _imageUrl: String!
+    private var _cachedImage: UIImage?
     private var _kidKey: String!
     private var _parents: Dictionary<String, String> = [:]
+    private var _currentStatus: Status = .Default
+    
+    
+    enum Status {
+        case Default, CheckedIn, CheckedOut
+    }
     
     var firstName: String {
         return _firstName
@@ -32,9 +39,24 @@ class DMKid {
         return _kidKey
     }
     
+    var cachedImage: UIImage {
+        return _cachedImage
+    }
+    
     var parents: Dictionary<String, String> {
         return _parents
     }
+    
+    var currentStatus: Status {
+        get {
+            return _currentStatus
+        }
+        
+        set(value) {
+            _currentStatus = value
+        }
+    }
+    
     
     init(firstName: String, lastName: String, imageUrl: String, kidParents: Dictionary<String, String>) {
         self._firstName = firstName

@@ -238,20 +238,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XeQ-ng-GMk">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XeQ-ng-GMk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LND-XS-pfO">
-                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="itemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="PJm-CZ-y3I" customClass="KidCell" customModule="DaycareManager" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="150" height="150"/>
+                                        <rect key="frame" x="5" y="69" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-qJ-Hwz">
@@ -263,11 +263,15 @@
                                                     <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzq-hg-KJ1">
+                                                    <rect key="frame" x="102" y="0.0" width="48" height="44"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
                                             <outlet property="captionLabel" destination="6ec-Us-UnP" id="101-NX-mec"/>
+                                            <outlet property="checkStatusIcon" destination="zzq-hg-KJ1" id="9NF-Ol-Zby"/>
                                             <outlet property="imageView" destination="k5o-qJ-Hwz" id="OtE-qL-Cp5"/>
                                         </connections>
                                     </collectionViewCell>
@@ -279,6 +283,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.86703708267908897" green="0.95294117649999999" blue="0.16456582939917028" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qbn-QG-Wpc" firstAttribute="top" secondItem="XeQ-ng-GMk" secondAttribute="bottom" id="7Dm-A8-i1v"/>
+                            <constraint firstItem="XeQ-ng-GMk" firstAttribute="top" secondItem="xDw-C4-ob1" secondAttribute="topMargin" id="XnQ-fX-ULH"/>
+                            <constraint firstItem="XeQ-ng-GMk" firstAttribute="leading" secondItem="xDw-C4-ob1" secondAttribute="leadingMargin" constant="-20" id="pFE-dy-FAP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XeQ-ng-GMk" secondAttribute="trailing" constant="-20" id="tZk-Nb-7Ro"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ueg-3p-2aQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="spw-yL-pnt">
@@ -417,7 +427,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ql7-K6-oWc">
                                 <rect key="frame" x="203" y="20" width="195" height="149"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axY-bz-L2o">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axY-bz-L2o">
                                 <rect key="frame" x="390" y="463" width="143" height="117"/>
                                 <color key="backgroundColor" red="1" green="0.38758765640452852" blue="0.045895402279243047" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Check Out"/>
@@ -431,7 +441,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCw-Af-GDL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCw-Af-GDL">
                                 <rect key="frame" x="93" y="463" width="143" height="117"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Check In"/>
@@ -457,38 +467,113 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-HO-3M2">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-HO-3M2">
                                 <rect key="frame" x="20" y="288" width="116" height="96.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="female-placeholder.png"/>
                                 <connections>
                                     <action selector="momButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="Bab-aE-4WM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-mM-KI1">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-mM-KI1">
                                 <rect key="frame" x="203" y="288" width="116" height="96.5"/>
                                 <state key="normal" backgroundImage="male-placeholder.png"/>
                                 <connections>
                                     <action selector="dadButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="m9Z-7V-I3n"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpS-Ma-CES">
+                                <rect key="frame" x="374" y="363" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-dw-mHR">
-                                <rect key="frame" x="374" y="285" width="116" height="104"/>
+                                <rect key="frame" x="374" y="285" width="206" height="50"/>
                                 <color key="backgroundColor" red="0.83177457206854744" green="1" blue="0.87264076106678301" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Other"/>
+                                <connections>
+                                    <segue destination="WDE-nN-A4D" kind="presentation" identifier="other" id="H9G-N7-TQ5"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="checkInButton" destination="ZCw-Af-GDL" id="n6F-Yu-0ib"/>
+                        <outlet property="checkOutButton" destination="axY-bz-L2o" id="xbU-U2-nF3"/>
+                        <outlet property="dadCheckButton" destination="iT4-mM-KI1" id="3sZ-DZ-zb3"/>
                         <outlet property="dadNameLabel" destination="Uwo-CU-o7o" id="wnh-UL-JPg"/>
                         <outlet property="kidImageView" destination="ql7-K6-oWc" id="Ttb-Vy-NqF"/>
                         <outlet property="kidNameLabel" destination="ALw-TP-fd2" id="DLn-Dp-SCH"/>
+                        <outlet property="momCheckButton" destination="RwY-HO-3M2" id="R2Z-x4-PDK"/>
                         <outlet property="momNameLabel" destination="qDu-nL-HxZ" id="xu3-N7-csl"/>
+                        <outlet property="otherCheckButton" destination="lnb-dw-mHR" id="TvS-zz-oeP"/>
+                        <outlet property="otherFullName" destination="fpS-Ma-CES" id="GjR-Zp-EOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMv-4B-cXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2870" y="1888"/>
+        </scene>
+        <!--Other Check Relative View Controller-->
+        <scene sceneID="KeB-EW-rYM">
+            <objects>
+                <viewController id="WDE-nN-A4D" customClass="OtherCheckRelativeViewController" customModule="DaycareManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="26O-IG-vJX"/>
+                        <viewControllerLayoutGuide type="bottom" id="h8J-lQ-BkG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mQs-Tf-kyr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6G-fJ-vP2">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="P9v-FQ-EoI" kind="unwind" unwindAction="addedOtherRelative:" id="jx1-dS-gQQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6j-uJ-siZ">
+                                <rect key="frame" x="50" y="398" width="452" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WDE-nN-A4D" id="oUi-Z2-Q7o"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5y-sP-CWW">
+                                <rect key="frame" x="156" y="44" width="279" height="235"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wme-Gq-gDK">
+                                <rect key="frame" x="20" y="10" width="57" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="WDE-nN-A4D" eventType="touchUpInside" id="bI8-wd-Up6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cV-mg-EIV">
+                                <rect key="frame" x="50" y="312" width="452" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WDE-nN-A4D" id="bAs-ko-gIa"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="kidImageView" destination="g5y-sP-CWW" id="0In-Yf-o7d"/>
+                        <outlet property="otherRelativeFirstName" destination="8cV-mg-EIV" id="zle-iH-DEm"/>
+                        <outlet property="otherRelativeLastName" destination="t6j-uJ-siZ" id="BYE-y7-Iyu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eD8-1l-AdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="P9v-FQ-EoI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3762" y="1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b4A-Iz-FjL">
@@ -512,8 +597,8 @@
     </scenes>
     <resources>
         <image name="fb-icon.png" width="65" height="65"/>
-        <image name="female-placeholder.png" width="800" height="600"/>
+        <image name="female-placeholder.png" width="232" height="192"/>
         <image name="logosingle.png" width="317" height="309"/>
-        <image name="male-placeholder.png" width="622" height="415"/>
+        <image name="male-placeholder.png" width="232" height="192"/>
     </resources>
 </document>
