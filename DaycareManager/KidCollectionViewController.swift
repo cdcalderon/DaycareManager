@@ -19,9 +19,9 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentAppUser = DataService.ds.REF_USER_CURRENT
         
-        
-        DataService.ds.REF_KIDS.observeEventType(.Value, withBlock: { snapshot in
+        DataService.ds.REF_KIDS.queryOrderedByChild("userappid").queryEqualToValue(currentAppUser.key).observeEventType(.Value, withBlock: { snapshot in
             print(snapshot)
             
             self.kidsArray = []

@@ -13,6 +13,35 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+        </mutableArray>
+        <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -325,7 +354,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CG6-4L-VcU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-bM-VhR">
@@ -334,7 +363,7 @@
                                     <constraint firstAttribute="height" constant="30" id="qEU-LW-6t0"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="qP1-eP-dRu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psq-yB-aH2">
@@ -343,7 +372,7 @@
                                     <constraint firstAttribute="height" constant="30" id="HHp-x8-tJv"/>
                                     <constraint firstAttribute="width" constant="65" id="oj8-6Z-sKn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-UX-QBX">
@@ -352,7 +381,7 @@
                                     <constraint firstAttribute="height" constant="30" id="cuo-IW-GGh"/>
                                     <constraint firstAttribute="width" constant="65" id="rdW-IV-11G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-bo-Ma7">
@@ -361,15 +390,16 @@
                                     <constraint firstAttribute="height" constant="30" id="I5s-08-XFX"/>
                                     <constraint firstAttribute="width" constant="65" id="NiQ-pH-uBn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcq-J8-i83">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcq-J8-i83" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="526" width="600" height="74"/>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="FHU-3c-P3Y"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -377,8 +407,9 @@
                                     <action selector="saveKidButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="WoI-Mb-DWh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-Eb-ffP">
-                                <rect key="frame" x="143" y="258" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-Eb-ffP" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
+                                <rect key="frame" x="135" y="256.5" width="82" height="33"/>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
                                 <state key="normal" title="Add Image"/>
                                 <connections>
                                     <action selector="addKidImageButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="xf6-0q-sHc"/>
@@ -398,7 +429,7 @@
                                     <constraint firstAttribute="width" constant="167" id="oHg-kE-mSH"/>
                                     <constraint firstAttribute="width" constant="211" id="qZD-sB-Bpr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -408,7 +439,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-P9-otY">
                                 <rect key="frame" x="20" y="446" width="167" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zb-GR-aFK">
@@ -418,7 +449,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="A7F-QA-af4"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="167" id="ZdJ-IQ-5Ss"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -428,12 +459,12 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNN-fs-zHF">
                                 <rect key="frame" x="422" y="446" width="167" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZG-JS-Z4N">
-                                <rect key="frame" x="88" y="364" width="31" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="87" y="361" width="32.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -443,7 +474,7 @@
                                     <constraint firstAttribute="width" constant="92" id="GuE-hQ-RYW"/>
                                     <constraint firstAttribute="height" constant="21" id="lxF-Zs-XJO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -453,27 +484,27 @@
                                     <constraint firstAttribute="width" constant="92" id="7mM-vm-I2Z"/>
                                     <constraint firstAttribute="height" constant="25" id="F4q-zg-uZh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M70-F2-S7b">
-                                <rect key="frame" x="67" y="173" width="35.5" height="21"/>
+                                <rect key="frame" x="67" y="173" width="37" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Wgg-b7-aCA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-K0-ypi">
-                                <rect key="frame" x="486" y="364" width="39" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="484" y="361" width="42" height="23.5"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nEW-Q2-9iN" firstAttribute="leading" secondItem="aaW-4A-iNh" secondAttribute="trailing" constant="8" id="6PQ-6O-M9F"/>
                             <constraint firstItem="aaW-4A-iNh" firstAttribute="top" secondItem="khS-TY-7PI" secondAttribute="bottom" constant="26" id="7VC-Ee-Eex"/>
@@ -554,10 +585,13 @@
                                     <constraint firstAttribute="height" constant="149" id="LNF-uK-MXe"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axY-bz-L2o">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axY-bz-L2o" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="300" y="511" width="300" height="89"/>
                                 <color key="backgroundColor" red="1" green="0.38758765640452852" blue="0.045895402279243047" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Check Out"/>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                <state key="normal" title="Check Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="checkOutButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="rtx-01-78m"/>
                                 </connections>
@@ -567,11 +601,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pHn-Xn-byV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-dw-mHR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-dw-mHR" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="384" y="288" width="117" height="70"/>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -581,6 +615,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="ggV-y4-bk9"/>
                                     <constraint firstAttribute="height" constant="70" id="nil-41-lv1"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                 <state key="normal" title="Other">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -595,14 +630,17 @@
                                     <segue destination="WDE-nN-A4D" kind="presentation" identifier="other" id="H9G-N7-TQ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCw-Af-GDL">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCw-Af-GDL" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="511" width="300" height="89"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="302" id="8cQ-LS-MwJ"/>
                                     <constraint firstAttribute="height" constant="89" id="xPh-BL-5CW"/>
                                 </constraints>
-                                <state key="normal" title="Check In"/>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                <state key="normal" title="Check In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="8cQ-LS-MwJ"/>
@@ -613,12 +651,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-CU-o7o">
-                                <rect key="frame" x="242" y="390" width="117" height="17.5"/>
+                                <rect key="frame" x="242" y="393" width="117" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="9eA-tv-WTf"/>
                                     <constraint firstAttribute="height" constant="21" id="hZf-JK-wrq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -629,12 +667,12 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDu-nL-HxZ">
-                                <rect key="frame" x="100" y="392" width="117" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="100" y="392" width="117" height="18"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-HO-3M2">
+                            <button opaque="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-HO-3M2" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="100" y="287" width="117" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="gib-B8-xRy"/>
@@ -646,7 +684,7 @@
                                     <action selector="momButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="Bab-aE-4WM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-mM-KI1">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-mM-KI1" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="242" y="287" width="117" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="Ahf-k5-4Mt"/>
@@ -675,7 +713,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALw-TP-fd2">
                                 <rect key="frame" x="28" y="229" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -832,41 +870,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6G-fJ-vP2">
-                                <rect key="frame" x="277" y="550" width="46" height="30"/>
-                                <state key="normal" title="Save"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6G-fJ-vP2" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="lWw-HC-Tok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="P9v-FQ-EoI" kind="unwind" unwindAction="addedOtherRelative:" id="jx1-dS-gQQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6j-uJ-siZ">
-                                <rect key="frame" x="50" y="398" width="452" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="WDE-nN-A4D" id="oUi-Z2-Q7o"/>
-                                </connections>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5y-sP-CWW">
-                                <rect key="frame" x="156" y="44" width="279" height="235"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wme-Gq-gDK">
-                                <rect key="frame" x="20" y="10" width="57" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelButtonPressed:" destination="WDE-nN-A4D" eventType="touchUpInside" id="bI8-wd-Up6"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cV-mg-EIV">
-                                <rect key="frame" x="50" y="312" width="452" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cV-mg-EIV">
+                                <rect key="frame" x="20" y="312" width="560" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fee-X0-bMx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="WDE-nN-A4D" id="bAs-ko-gIa"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g5y-sP-CWW">
+                                <rect key="frame" x="161" y="44" width="279" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="279" id="LIz-kb-qE3"/>
+                                    <constraint firstAttribute="height" constant="235" id="gXX-lz-otR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wme-Gq-gDK">
+                                <rect key="frame" x="20" y="10" width="53" height="34"/>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="WDE-nN-A4D" eventType="touchUpInside" id="bI8-wd-Up6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6j-uJ-siZ">
+                                <rect key="frame" x="20" y="372" width="560" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="uFW-SL-Eu7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WDE-nN-A4D" id="oUi-Z2-Q7o"/>
+                                </connections>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wme-Gq-gDK" firstAttribute="top" secondItem="mQs-Tf-kyr" secondAttribute="topMargin" constant="10" id="23w-Zm-ycV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8cV-mg-EIV" secondAttribute="trailing" constant="78" id="86u-K2-xVL"/>
+                            <constraint firstItem="Y6G-fJ-vP2" firstAttribute="leading" secondItem="mQs-Tf-kyr" secondAttribute="leadingMargin" constant="-20" id="8Ip-t5-GXz"/>
+                            <constraint firstItem="h8J-lQ-BkG" firstAttribute="top" secondItem="Y6G-fJ-vP2" secondAttribute="bottom" id="9lS-XS-bYb"/>
+                            <constraint firstItem="g5y-sP-CWW" firstAttribute="top" secondItem="26O-IG-vJX" secondAttribute="bottom" constant="24" id="AVJ-En-496"/>
+                            <constraint firstItem="t6j-uJ-siZ" firstAttribute="top" secondItem="8cV-mg-EIV" secondAttribute="bottom" constant="56" id="CUV-q3-CUr"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="centerX" secondItem="Y6G-fJ-vP2" secondAttribute="centerX" id="FzF-89-NxY"/>
+                            <constraint firstItem="t6j-uJ-siZ" firstAttribute="top" secondItem="8cV-mg-EIV" secondAttribute="bottom" constant="25" id="Gwh-8R-tIZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y6G-fJ-vP2" secondAttribute="trailing" constant="-20" id="Qem-fn-z1n"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="leading" secondItem="Wme-Gq-gDK" secondAttribute="leading" id="SJ7-RD-fg5"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="trailing" secondItem="t6j-uJ-siZ" secondAttribute="trailing" id="TQw-c9-Mj6"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="leading" secondItem="mQs-Tf-kyr" secondAttribute="leadingMargin" constant="30" id="XXn-eo-4vN"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="centerX" secondItem="g5y-sP-CWW" secondAttribute="centerX" id="Z5Y-AZ-JSY"/>
+                            <constraint firstItem="g5y-sP-CWW" firstAttribute="centerX" secondItem="mQs-Tf-kyr" secondAttribute="centerX" id="bCC-Q7-Dmw"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="trailing" secondItem="t6j-uJ-siZ" secondAttribute="trailing" id="gKP-VD-bZa"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="top" secondItem="g5y-sP-CWW" secondAttribute="bottom" constant="33" id="gW1-uf-21c"/>
+                            <constraint firstItem="Wme-Gq-gDK" firstAttribute="leading" secondItem="mQs-Tf-kyr" secondAttribute="leadingMargin" id="pV2-An-6Ol"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="trailing" secondItem="mQs-Tf-kyr" secondAttribute="trailingMargin" id="x0E-XG-3F4"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="leading" secondItem="t6j-uJ-siZ" secondAttribute="leading" id="ylO-SR-luy"/>
+                            <constraint firstItem="8cV-mg-EIV" firstAttribute="leading" secondItem="mQs-Tf-kyr" secondAttribute="leadingMargin" id="zhF-pp-Ji5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="86u-K2-xVL"/>
+                                <exclude reference="XXn-eo-4vN"/>
+                                <exclude reference="gKP-VD-bZa"/>
+                                <exclude reference="x0E-XG-3F4"/>
+                                <exclude reference="zhF-pp-Ji5"/>
+                                <exclude reference="CUV-q3-CUr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="kidImageView" destination="g5y-sP-CWW" id="0In-Yf-o7d"/>

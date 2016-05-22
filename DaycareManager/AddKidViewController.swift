@@ -63,7 +63,9 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
         cloudinary.config().setValue("686262751217777", forKey: "api_key")
         cloudinary.config().setValue("5qSCCtXQ45SHWF-dUeNi7JkpwZY", forKey: "api_secret")
         
-        let  uploader: CLUploader = CLUploader(cloudinary, delegate: self)
+        let uploader: CLUploader = CLUploader(cloudinary, delegate: self)
+        
+        let currentUser = DataService.ds.REF_USER_CURRENT
         
         uploader.upload(UIImageJPEGRepresentation(selectedImage.image!, 0.8), options: ["format":"jpg"], withCompletion: { sucessResult, error, code, context in
             print("DONE IMAGE")
@@ -76,7 +78,8 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                  kid = [
                     "firstName": firstName,
                     "lastName": lastName,
-                    "imageUrl": imageUrl
+                    "imageUrl": imageUrl,
+                    "userappid": currentUser.key
                 ]
                 firebaseKid.setValue(kid)
                 self.firstNameTextField.text = ""
@@ -90,7 +93,8 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                 let parentDad: Dictionary<String, AnyObject> = [
                     "firstName": dadFirstName,
                     "lastName": dadLastName,
-                    "relationship": "father"
+                    "relationship": "father",
+                    "userappid": currentUser.key
                 ]
                 //save parent
                 let firebaseParentDad = DataService.ds.REF_PARENTS.childByAutoId()
@@ -116,7 +120,9 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                 let parentMom: Dictionary<String, AnyObject> = [
                     "firstName": momFirstName,
                     "lastName": momLastName,
-                    "relationship": "mother"
+                    "relationship": "mother",
+                    "userappid": currentUser.key
+
                 ]
                 
                 let firebaseParentMom = DataService.ds.REF_PARENTS.childByAutoId()
