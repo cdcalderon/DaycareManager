@@ -17,6 +17,7 @@ class DMKid {
     private var _kidKey: String!
     private var _parents: Dictionary<String, String> = [:]
     private var _currentStatus: Status = .Default
+    private var _checkStatus: String!
     
     
     enum Status {
@@ -45,6 +46,10 @@ class DMKid {
     
     var parents: Dictionary<String, String> {
         return _parents
+    }
+    
+    var checkStatus: String {
+        return _checkStatus
     }
     
     var currentStatus: Status {
@@ -83,5 +88,18 @@ class DMKid {
         if let kidparents = dictionary["parents"] as? Dictionary<String, String> {
             self._parents = kidparents
         }
+        
+        if let checkStatus = dictionary["status"] as? String {
+            self._checkStatus = checkStatus
+            if self._checkStatus == "checkedin" {
+                self.currentStatus = .CheckedIn
+            } else if self._checkStatus == "checkedout" {
+                self.currentStatus = .CheckedOut
+            } else {
+                self.currentStatus = .Default
+            }
+        }
+        
+        
     }
 }

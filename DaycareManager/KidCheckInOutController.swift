@@ -113,6 +113,12 @@ class KidCheckInOutController: UIViewController {
         
         firebaseCheckAction.setValue(checkAction)
         checkInButton.enabled = false
+        
+        let firebaseKid = DataService.ds.REF_KIDS.childByAppendingPath(self.kid.kidKey)
+        let kid = [
+            "status": "checkedin"
+        ]
+        firebaseKid.updateChildValues(kid)
     }
     
     @IBAction func checkOutButtonPressed(sender: UIButton) {
@@ -133,6 +139,12 @@ class KidCheckInOutController: UIViewController {
         
         firebaseCheckAction.setValue(checkAction)
         checkOutButton.enabled = false
+        
+        let firebaseKid = DataService.ds.REF_KIDS.childByAppendingPath(self.kid.kidKey)
+        let kid = [
+            "status": "checkedout"
+        ]
+        firebaseKid.updateChildValues(kid)
     }
     
     
@@ -214,7 +226,7 @@ class KidCheckInOutController: UIViewController {
     }
     
     func setupCheckedOutState () {
-        checkInButton.enabled = false
+        checkInButton.enabled = true
         checkOutButton.enabled = false
     }
     
@@ -246,4 +258,20 @@ class KidCheckInOutController: UIViewController {
         
         otherCheckButton.setBackgroundImage(UIImage(named: "othercheckchecked"), forState: UIControlState.Normal)
     }
+    
+    
+    func confirmAction () {
+        var refreshAlert = UIAlertController(title: "Refresh", message: "All data will be lost.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Handle Ok logic here")
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+    }
+   
 }

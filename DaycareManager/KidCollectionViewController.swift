@@ -15,12 +15,11 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     
     var kidsArray = [DMKid]()
     var kidsImages = NSMutableDictionary()
-    var checkActions = [[String:AnyObject]]()
+    //var checkActions = [[String:AnyObject]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let todayDate = getTodayDate()
         
         DataService.ds.REF_KIDS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot)
@@ -43,23 +42,23 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
             self.kidCollectionView.reloadData()
         })
         
-        DataService.ds.REF_CHECK_ACTION.queryOrderedByChild("fulldate").queryEqualToValue("\(todayDate.month)-\(todayDate.day)-\(todayDate.year)")
-            .observeEventType(.Value, withBlock: { snapshot in
-                print(snapshot)
-                self.checkActions = []
-                if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
-                    
-                    for snap in snapshots {
-                        print("SNAP:  \(snap)")
-                        
-                        if let checkAction = snap.value as? Dictionary<String, AnyObject> {
-                            self.checkActions.append(checkAction)
-                        }
-                    }
-                }
-                
-                self.kidCollectionView.reloadData()
-            })
+//        DataService.ds.REF_CHECK_ACTION.queryOrderedByChild("fulldate").queryEqualToValue("\(todayDate.month)-\(todayDate.day)-\(todayDate.year)")
+//            .observeEventType(.Value, withBlock: { snapshot in
+//                print(snapshot)
+//                self.checkActions = []
+//                if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+//                    
+//                    for snap in snapshots {
+//                        print("SNAP:  \(snap)")
+//                        
+//                        if let checkAction = snap.value as? Dictionary<String, AnyObject> {
+//                            self.checkActions.append(checkAction)
+//                        }
+//                    }
+//                }
+//                
+//                self.kidCollectionView.reloadData()
+//            })
         
     }
     
@@ -80,10 +79,9 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
         
         let kid = kidsArray[indexPath.row]
         print("OBJECT : \(kid.firstName) - \(kid.lastName) ")
-        cell.imageView.image = nil
-        cell.checkStatusIcon.image = nil
         
-        cell.renderCell(kid, checkActions: self.checkActions, kidCachedImages: kidsImages)
+        
+        cell.renderCell(kid, kidCachedImages: kidsImages)
         
         return cell
     }
