@@ -14,8 +14,9 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var kidCollectionView: UICollectionView!
     
     var kidsArray = [DMKid]()
-    var kidsImages = [String: UIImage]()
+    var kidsImages = NSMutableDictionary()
     var checkActions = [[String:AnyObject]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,7 +83,7 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
         cell.imageView.image = nil
         cell.checkStatusIcon.image = nil
         
-        cell.renderCell(kid, checkActions: self.checkActions)
+        cell.renderCell(kid, checkActions: self.checkActions, kidCachedImages: kidsImages)
         
         return cell
     }

@@ -40,7 +40,7 @@ class DMKid {
     }
     
     var cachedImage: UIImage {
-        return _cachedImage
+        return _cachedImage!
     }
     
     var parents: Dictionary<String, String> {

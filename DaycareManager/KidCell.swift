@@ -15,22 +15,32 @@ class KidCell: UICollectionViewCell {
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var checkStatusIcon: UIImageView!
     
-    func renderCell(kid: DMKid, checkActions:[[String:AnyObject]], inout kidCachedImage:[String: UIImage]) {
+    func renderCell(kid: DMKid, checkActions:[[String:AnyObject]], kidCachedImages: NSMutableDictionary) {
         
         let url = NSURL(string: kid.imageUrl)
         self.captionLabel.text = "\(kid.firstName) \(kid.lastName)"
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            if let imageUrl = url {
-                
-                let data = NSData(contentsOfURL: imageUrl) //make sure your image in this url does exist, otherwise unwrap in a if let
-                dispatch_async(dispatch_get_main_queue(), {
+        if let cachedImage = kidCachedImages.objectForKey(kid.imageUrl) {
+            self.imageView.image = cachedImage as? UIImage
+        } else {
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                if let imageUrl = url {
                     
-                    self.imageView.image = UIImage(data: data!)
-                    kidCachedImage[kid.imageUrl] = self.imageView.image
-                });
+                    if let data = NSData(contentsOfURL: imageUrl) {
+                        kidCachedImages[kid.imageUrl] = UIImage(data: data)
+
+                        dispatch_async(dispatch_get_main_queue(), {
+                            
+                            self.imageView.image = UIImage(data: data)
+                        });
+                    }
+                    
+                }
             }
         }
+        
+        
         
         if checkActions.count > 0 {
             
