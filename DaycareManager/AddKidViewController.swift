@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate , CLUploaderDelegate{
+class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate , CLUploaderDelegate, UITextFieldDelegate{
 
     //kid
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -48,14 +48,39 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func addKidImageButtonPressed(sender: UIButton) {
-       presentViewController(imagePicker, animated: true, completion: nil)
         
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .Camera
+                imagePicker.cameraCaptureMode = .Photo
+                presentViewController(imagePicker, animated: true, completion: {})
+            } else {
+                //postAlert("Rear camera doesn't exist", message: "Application cannot access the camera.")
+            }
+        } else {
+           // postAlert("Camera inaccessable", message: "Application cannot access the camera.")
+        }
+     //  presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func selectKidImageFromLibraryButtonPressed(sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     
     func saveKidToFirebase() {
-        
-        
        // let cloudinary_url = "cloudinary://686262751217777:5qSCCtXQ45SHWF-dUeNi7JkpwZY@carlos-calderon"
         let cloudinary: CLCloudinary = CLCloudinary()
         
@@ -162,4 +187,13 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         selectedImage.image = image
     }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        print("User canceled image")
+        dismissViewControllerAnimated(true, completion: {
+            // Anything you want to happen when the user selects cancel
+        })
+    }
+
+    
 }

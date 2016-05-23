@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class KidCheckInOutController: UIViewController {
+class KidCheckInOutController: UIViewController, UITextFieldDelegate {
     
     var kid: DMKid!
     var kidImage: UIImage?
@@ -59,6 +59,11 @@ class KidCheckInOutController: UIViewController {
     override func viewDidAppear(animated: Bool) {
        
         
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func getParentInformation(kid:DMKid) {

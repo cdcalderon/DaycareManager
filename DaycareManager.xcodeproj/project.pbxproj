@@ -18,6 +18,7 @@
 		077014A11CF0BA120018E2CA /* female-placeholderchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014A01CF0BA120018E2CA /* female-placeholderchecked.png */; };
 		077014A31CF0BC1D0018E2CA /* male-placeholderchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014A21CF0BC1D0018E2CA /* male-placeholderchecked.png */; };
 		077014A51CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */; };
+		077014A71CF25A3A0018E2CA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077014A61CF25A3A0018E2CA /* MobileCoreServices.framework */; };
 		07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */; };
 		07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */; };
 		07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */; };
@@ -74,6 +75,7 @@
 		077014A01CF0BA120018E2CA /* female-placeholderchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-placeholderchecked.png"; sourceTree = "<group>"; };
 		077014A21CF0BC1D0018E2CA /* male-placeholderchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-placeholderchecked.png"; sourceTree = "<group>"; };
 		077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherCheckRelativeViewController.swift; sourceTree = "<group>"; };
+		077014A61CF25A3A0018E2CA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077014A71CF25A3A0018E2CA /* MobileCoreServices.framework in Frameworks */,
 				07BA1D351CE87C4000A92C4B /* SystemConfiguration.framework in Frameworks */,
 				07BA1D331CE87C3600A92C4B /* Security.framework in Frameworks */,
 				07BA1D311CE87C2B00A92C4B /* CFNetwork.framework in Frameworks */,
@@ -287,6 +290,7 @@
 		A41FAB895C63DFD992F4CA27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				077014A61CF25A3A0018E2CA /* MobileCoreServices.framework */,
 				07BA1D341CE87C4000A92C4B /* SystemConfiguration.framework */,
 				07BA1D321CE87C3600A92C4B /* Security.framework */,
 				07BA1D301CE87C2B00A92C4B /* CFNetwork.framework */,
