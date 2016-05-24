@@ -77,9 +77,10 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
                     
                     let parent = snapshot.value as? Dictionary<String, AnyObject>
                     if let firstName = parent!["firstName"],let lastName = parent!["lastName"] {
-                        
+                        self.dadNameLabel.hidden = false
                         self.dadNameLabel.text = "\(firstName) \(lastName)"
                         self.currentParentDadId = key
+                        self.dadCheckButton.enabled = true
                     }
                     
                 })
@@ -91,8 +92,10 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
                     let parent = snapshot.value as? Dictionary<String, AnyObject>
                     if let firstName = parent!["firstName"],let lastName = parent!["lastName"] {
                         
+                        self.momNameLabel.hidden = false
                         self.momNameLabel.text = "\(firstName) \(lastName)"
                         self.currentParentMomId = key
+                        self.momCheckButton.enabled = true
                     }
                     
                 })
@@ -265,12 +268,19 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
         otherCheckButton.setBackgroundImage(UIImage(named: "othercheckchecked"), forState: UIControlState.Normal)
     }
     
+    @IBAction func deleteKidButtonPressed(sender: UIButton) {
     
-    func confirmAction () {
+        confirmDeleteKidAction(self.kid)
+    }
+    
+    func confirmDeleteKidAction (kid: DMKid) {
+        
         var refreshAlert = UIAlertController(title: "Refresh", message: "All data will be lost.", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
             print("Handle Ok logic here")
+            
+            DataService.ds.REF_KIDS.childByAppendingPath(kid.kidKey).removeValue()
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in

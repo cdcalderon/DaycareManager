@@ -286,7 +286,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-qJ-Hwz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-qJ-Hwz">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ec-Us-UnP">
@@ -626,7 +626,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ql7-K6-oWc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ql7-K6-oWc">
                                 <rect key="frame" x="203" y="72" width="195" height="149"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="195" id="6hX-K3-Uax"/>
@@ -635,10 +635,13 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axY-bz-L2o" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="300" y="511" width="300" height="89"/>
-                                <color key="backgroundColor" red="1" green="0.38758765640452852" blue="0.045895402279243047" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.38758765640452852" blue="0.045895402279243047" alpha="0.8588506711409396" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                 <state key="normal" title="Check Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="0.26596581375838924" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="checkOutButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="rtx-01-78m"/>
@@ -680,7 +683,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCw-Af-GDL" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="511" width="300" height="89"/>
-                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="0.89526531040268453" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="302" id="8cQ-LS-MwJ"/>
                                     <constraint firstAttribute="height" constant="89" id="xPh-BL-5CW"/>
@@ -688,6 +691,9 @@
                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                 <state key="normal" title="Check In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="0.40272388842281881" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -698,7 +704,7 @@
                                     <action selector="checkInButtomPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="wss-4h-7uE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-CU-o7o">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-CU-o7o">
                                 <rect key="frame" x="242" y="393" width="117" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="9eA-tv-WTf"/>
@@ -714,13 +720,13 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDu-nL-HxZ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDu-nL-HxZ">
                                 <rect key="frame" x="100" y="392" width="117" height="18"/>
                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-HO-3M2" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-HO-3M2" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="100" y="287" width="117" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="gib-B8-xRy"/>
@@ -732,7 +738,7 @@
                                     <action selector="momButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="Bab-aE-4WM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-mM-KI1" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-mM-KI1" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="242" y="287" width="117" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="Ahf-k5-4Mt"/>
@@ -766,6 +772,9 @@
                                 <state key="normal" title="Delete Kid">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteKidButtonPressed:" destination="l34-IF-4qA" eventType="touchUpInside" id="FAj-aw-0Co"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mY-3M-PSL">
                                 <rect key="frame" x="57" y="119" width="46" height="30"/>
