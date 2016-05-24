@@ -13,12 +13,16 @@ class KidCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var checkStatusIcon: UIImageView!
     
     func renderCell(kid: DMKid, kidCachedImages: NSMutableDictionary) {
-        
+        let kidAge = self.getKidAge(kid)
         let url = NSURL(string: kid.imageUrl)
         self.captionLabel.text = "\(kid.firstName) \(kid.lastName)"
+        
+        
+        self.ageLabel.text = "Y- \(kidAge.years) M- \(kidAge.months) D- \(kidAge.days)"
         
         if let cachedImage = kidCachedImages.objectForKey(kid.imageUrl) {
             self.imageView.image = nil
@@ -66,6 +70,8 @@ class KidCell: UICollectionViewCell {
         
         
         
+        
+        
 //        if checkActions.count > 0 {
 //            
 //            for checkAction in checkActions {
@@ -92,5 +98,40 @@ class KidCell: UICollectionViewCell {
 //            
 //        }
     }
+    
+    func getKidAge(kid: DMKid) -> (years: Int, months: Int, days: Int){
+        
+        let userCalendar = NSCalendar.currentCalendar()
+        
+        
+        // March 10, 1876
+        // In this case, we're using an NSDatesComponents instance
+        // to represent a date rather than a duration of time.
+        let firstLandPhoneCallDateComponents = NSDateComponents()
+        
+        // We don't know the time when Alexander Graham Bell made
+        // his historic phone call, so we'll simply provide the
+        // year, month and day.
+        // We *do* know that he made that call in North America's
+        // eastern time zone, so we'll specify that.
+        firstLandPhoneCallDateComponents.year = 1979
+        firstLandPhoneCallDateComponents.month = 5
+        firstLandPhoneCallDateComponents.day = 7
+        firstLandPhoneCallDateComponents.timeZone = NSTimeZone(name: "US/Eastern")
+        
+        // We have a calendar and date components. We can now make a date!
+        // On my system (US/Eastern time zone), the result for the line below is
+        // "Mar 10, 1876, 12:00 AM"
+        let firstLandPhoneCallDate = userCalendar.dateFromComponents(firstLandPhoneCallDateComponents)!
+        
+        return calculateAge(firstLandPhoneCallDate)
+    }
+    
+    func calculateAge (birthday: NSDate) -> (years: Int, months: Int, days: Int) {
+        let components = NSCalendar.currentCalendar().components([.Day , .Month , .Year], fromDate: birthday, toDate: NSDate(), options: [])
+        
+        return (components.year, components.month, components.day)
+    }
+
     
 }

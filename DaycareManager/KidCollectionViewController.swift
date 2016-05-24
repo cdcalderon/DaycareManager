@@ -44,6 +44,8 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        
+        
         let currentAppUser = DataService.ds.REF_USER_CURRENT
         
         DataService.ds.REF_KIDS.queryOrderedByChild("userappid").queryEqualToValue(currentAppUser.key).observeEventType(.Value, withBlock: { snapshot in
@@ -85,6 +87,7 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
         let cell: KidCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! KidCell
         
         let kid = kidsArray[indexPath.row]
+        
         print("OBJECT : \(kid.firstName) - \(kid.lastName) ")
         
         
@@ -125,4 +128,5 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
         
         return (day, month, hr, min, year)
     }
-}
+    
+    }
