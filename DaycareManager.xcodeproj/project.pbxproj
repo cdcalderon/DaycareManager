@@ -19,6 +19,8 @@
 		077014A31CF0BC1D0018E2CA /* male-placeholderchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 077014A21CF0BC1D0018E2CA /* male-placeholderchecked.png */; };
 		077014A51CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */; };
 		077014A71CF25A3A0018E2CA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077014A61CF25A3A0018E2CA /* MobileCoreServices.framework */; };
+		077014A91CF3B7DA0018E2CA /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077014A81CF3B7DA0018E2CA /* ExportManager.swift */; };
+		077014AB1CF3B8BA0018E2CA /* DMReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077014AA1CF3B8BA0018E2CA /* DMReport.swift */; };
 		07BA1CF61CE7C79C00A92C4B /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */; };
 		07BA1CF71CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */; };
 		07BA1CF81CE7C79C00A92C4B /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */; };
@@ -76,6 +78,8 @@
 		077014A21CF0BC1D0018E2CA /* male-placeholderchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-placeholderchecked.png"; sourceTree = "<group>"; };
 		077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherCheckRelativeViewController.swift; sourceTree = "<group>"; };
 		077014A61CF25A3A0018E2CA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		077014A81CF3B7DA0018E2CA /* ExportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
+		077014AA1CF3B8BA0018E2CA /* DMReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMReport.swift; sourceTree = "<group>"; };
 		07BA1CF21CE7C79C00A92C4B /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		07BA1CF31CE7C79C00A92C4B /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		07BA1CF41CE7C79C00A92C4B /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		07BA1D361CE87C7E00A92C4B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				077014A81CF3B7DA0018E2CA /* ExportManager.swift */,
 				07BA1D371CE87C9B00A92C4B /* DataService.swift */,
 			);
 			name = Services;
@@ -255,6 +260,7 @@
 				07BBFF731CE6CD0900A2AAEE /* Model */,
 				07BBFF661CE6C7E000A2AAEE /* DaycareManager.xcdatamodeld */,
 				07BA1D411CEAFC2A00A92C4B /* DMKid.swift */,
+				077014AA1CF3B8BA0018E2CA /* DMReport.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 				07BA1D0E1CE7F6C900A92C4B /* Constants.swift in Sources */,
 				07641DF21CED1370004EB176 /* KidCheckInOutController.swift in Sources */,
 				07BA1D101CE806AC00A92C4B /* MaterialButton.swift in Sources */,
+				077014A91CF3B7DA0018E2CA /* ExportManager.swift in Sources */,
 				07BA1D401CEAF36900A92C4B /* KidCollectionViewController.swift in Sources */,
 				07BA1D3E1CEAF02E00A92C4B /* KidCell.swift in Sources */,
 				07BBFF531CE6AE5600A2AAEE /* ViewController.swift in Sources */,
@@ -466,6 +473,7 @@
 				07BBFF7A1CE6CFDD00A2AAEE /* Parent+CoreDataProperties.swift in Sources */,
 				07BBFF781CE6CFDD00A2AAEE /* Kid+CoreDataProperties.swift in Sources */,
 				07BBFF841CE6E96E00A2AAEE /* DMRecord.m in Sources */,
+				077014AB1CF3B8BA0018E2CA /* DMReport.swift in Sources */,
 				07BA1D091CE7EE6100A92C4B /* MaterialView.swift in Sources */,
 				07BA1D121CE80B7A00A92C4B /* MaterialTextField.swift in Sources */,
 				07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */,

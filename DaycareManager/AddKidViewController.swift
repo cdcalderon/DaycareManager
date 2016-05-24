@@ -41,6 +41,8 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        
+
     }
     
     @IBAction func saveKidButtonPressed(sender: UIButton) {

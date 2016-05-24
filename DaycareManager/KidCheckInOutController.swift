@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import MessageUI
 
-class KidCheckInOutController: UIViewController, UITextFieldDelegate {
+class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
     var kid: DMKid!
     var kidImage: UIImage?
@@ -279,4 +280,140 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate {
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
    
+    @IBAction func activateNotButtonPressed(sender: UIButton) {
+    
+        let theDate = NSDate()
+        let dateComp = NSDateComponents()
+        dateComp.second = 10
+        
+        let cal = NSCalendar.currentCalendar()
+        let fireDate:NSDate = cal.dateByAddingComponents(dateComp, toDate: theDate, options: NSCalendarOptions())!
+        
+        
+        
+        let notification:UILocalNotification = UILocalNotification()
+        
+        notification.alertBody = "This is a local notification"
+        notification.fireDate = fireDate
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+    }
+    
+    @IBAction func export(sender: UIButton) {
+        var ar: [DMReport] = [DMReport]()
+        
+        ar.append(DMReport(kidFirstName: "Coky", kidLastName: "Calderon", kidKey: "123456789", checkInDay: 12, checkInMonth: 3, checkInYear: 2016, checkOutDay: 12, checkOutMonth: 3, checkOutYear: 2016, parentFirstName: "Carlos", parentLastName: "Calderon"))
+        
+        exportDatabase(ar)
+        
+        
+//        let emailTitle = "My Email Title"
+//        let messageBody = "Email Body"
+//        
+//        var mc = MFMailComposeViewController()
+//        mc.mailComposeDelegate = self
+//        mc.setSubject(emailTitle)
+//        mc.setMessageBody(messageBody, isHTML:false)
+//        mc.setToRecipients([])
+//        
+//        var csv = "";
+//        
+//        csv.appendContentsOf("MY DATA YADA YADA")
+//        
+//        let filePath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+//        
+//        var fileName = "MyCSVFileName.csv"
+//        
+//        let fileAtPath = (NSTemporaryDirectory() as NSString).stringByAppendingPathComponent(fileName)
+//
+//        if NSFileManager.defaultManager().fileExistsAtPath(fileAtPath) {
+//            print("file available")
+//        }
+//        else {
+//            print("file not available")
+//        }
+//        
+//        
+//        
+//        let requestBodyData: NSData = csv.dataUsingEncoding(NSUTF8StringEncoding)!
+//        
+//        if requestBodyData.length > 0{
+//            mc.addAttachmentData(requestBodyData, mimeType: "text/csv", fileName: "MyCSVFileName.csv")
+//        } else {
+//            
+//        }
+    }
+    func createExportString(fetchedArray:[DMReport]) -> String {
+       
+        var export: String = NSLocalizedString("Kid First Name, Kid Last Name, Kid Key, Check In Day, Check In Month, Check In Year, Check Out Day, Check Out Month, Check Out Year, Parent First Name, Parent Last Name \n", comment: "")
+        for report in fetchedArray {
+            let kidFirstName = report.kidFirstName
+            let kidLastName = report.kidLastName
+            let kidKey = "\(report.kidKey)"
+            let checkInDay = "\(report.checkInDay)"
+            let checkInMonth = "\(report.checkInMonth)"
+            let checkInYear = "\(report.checkInYear)"
+            let checkOutDay = "\(report.checkOutDay)"
+            let checkOutMonth = "\(report.checkOutMonth)"
+            let checkOutYear = "\(report.checkOutYear)"
+            let parentFirstName = "\(report.parentFirstName)"
+            let parentLastName = "\(report.parentLastName)"
+            
+            export += kidFirstName + "," + kidLastName + "," + kidKey + "," + checkInDay + "," + checkInMonth + "," + checkInYear + "," + checkOutDay + "," + checkOutMonth + "," + checkOutYear + "," + parentFirstName + "," + parentLastName + "\n"
+            
+        }
+        print("This is what the app will export: \(export)")
+        return export
+    }
+    
+    func exportDatabase(fetchedArray:[DMReport]) {
+        let exportString = createExportString(fetchedArray)
+        saveAndExport(exportString)
+    }
+    
+    func saveAndExport(exportString: String) {
+        let exportFilePath = NSTemporaryDirectory() + "export.csv"
+        let exportFileURL = NSURL(fileURLWithPath: exportFilePath)
+        NSFileManager.defaultManager().createFileAtPath(exportFilePath, contents: NSData(), attributes: nil)
+        var fileHandleError: NSError? = nil
+        var fileHandle: NSFileHandle? = nil
+        do {
+            fileHandle = try NSFileHandle(forWritingToURL: exportFileURL)
+        } catch {
+            print("Error with fileHandle")
+        }
+        
+        if fileHandle != nil {
+            fileHandle!.seekToEndOfFile()
+            let csvData = exportString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+            fileHandle!.writeData(csvData!)
+            
+            fileHandle!.closeFile()
+            
+            let firstActivityItem = NSURL(fileURLWithPath: exportFilePath)
+            let activityViewController : UIActivityViewController = UIActivityViewController(
+                activityItems: [firstActivityItem], applicationActivities: nil)
+            
+            activityViewController.excludedActivityTypes = [
+                UIActivityTypeAssignToContact,
+                UIActivityTypeSaveToCameraRoll,
+                UIActivityTypePostToFlickr,
+                UIActivityTypePostToVimeo,
+                UIActivityTypePostToTencentWeibo,
+                UIActivityTypeMail
+            ]
+            
+            //        if requestBodyData.length > 0{
+            //            mc.addAttachmentData(requestBodyData, mimeType: "text/csv", fileName: "MyCSVFileName.csv")
+            //        } else {
+            //            
+            //        }
+            
+            
+            self.presentViewController(activityViewController, animated: true, completion: nil)
+        }
+    }
+    
+
 }
