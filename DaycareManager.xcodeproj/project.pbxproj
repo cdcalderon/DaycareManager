@@ -62,6 +62,7 @@
 		07BBFF7A1CE6CFDD00A2AAEE /* Parent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF761CE6CFDD00A2AAEE /* Parent+CoreDataProperties.swift */; };
 		07BBFF7B1CE6CFDD00A2AAEE /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF771CE6CFDD00A2AAEE /* Parent.swift */; };
 		07BBFF841CE6E96E00A2AAEE /* DMRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BBFF831CE6E96E00A2AAEE /* DMRecord.m */; };
+		07E06F831CF9766C0003B494 /* SendReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E06F821CF9766C0003B494 /* SendReportViewController.swift */; };
 		0EEF3F849228D5275D69570A /* libPods-DaycareManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8219F72C26384A2ABBFCEEA /* libPods-DaycareManager.a */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		07BBFF771CE6CFDD00A2AAEE /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
 		07BBFF821CE6E96E00A2AAEE /* DMRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecord.h; sourceTree = "<group>"; };
 		07BBFF831CE6E96E00A2AAEE /* DMRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecord.m; sourceTree = "<group>"; };
+		07E06F821CF9766C0003B494 /* SendReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendReportViewController.swift; sourceTree = "<group>"; };
 		33208A5A1B70B0923A7D6DA4 /* Pods-DaycareManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaycareManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaycareManager/Pods-DaycareManager.release.xcconfig"; sourceTree = "<group>"; };
 		779CE410314EE5630F38F0AD /* Pods-DaycareManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaycareManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaycareManager/Pods-DaycareManager.debug.xcconfig"; sourceTree = "<group>"; };
 		D8219F72C26384A2ABBFCEEA /* libPods-DaycareManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaycareManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +280,7 @@
 				07BA1D3F1CEAF36900A92C4B /* KidCollectionViewController.swift */,
 				07641DF11CED1370004EB176 /* KidCheckInOutController.swift */,
 				077014A41CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift */,
+				07E06F821CF9766C0003B494 /* SendReportViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				07BA1D091CE7EE6100A92C4B /* MaterialView.swift in Sources */,
 				07BA1D121CE80B7A00A92C4B /* MaterialTextField.swift in Sources */,
 				07BBFF511CE6AE5600A2AAEE /* AppDelegate.swift in Sources */,
+				07E06F831CF9766C0003B494 /* SendReportViewController.swift in Sources */,
 				077014A51CF0C4E70018E2CA /* OtherCheckRelativeViewController.swift in Sources */,
 				07BA1D421CEAFC2A00A92C4B /* DMKid.swift in Sources */,
 				07BA1D3A1CEA806400A92C4B /* AddKidViewController.swift in Sources */,

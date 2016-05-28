@@ -103,26 +103,14 @@ class KidCell: UICollectionViewCell {
         
         let userCalendar = NSCalendar.currentCalendar()
         
+        let kidAgeDateComponents = NSDateComponents()
         
-        // March 10, 1876
-        // In this case, we're using an NSDatesComponents instance
-        // to represent a date rather than a duration of time.
-        let firstLandPhoneCallDateComponents = NSDateComponents()
+        kidAgeDateComponents.year = 1979
+        kidAgeDateComponents.month = 5
+        kidAgeDateComponents.day = 7
+        kidAgeDateComponents.timeZone = NSTimeZone(name: "US/Eastern")
         
-        // We don't know the time when Alexander Graham Bell made
-        // his historic phone call, so we'll simply provide the
-        // year, month and day.
-        // We *do* know that he made that call in North America's
-        // eastern time zone, so we'll specify that.
-        firstLandPhoneCallDateComponents.year = 1979
-        firstLandPhoneCallDateComponents.month = 5
-        firstLandPhoneCallDateComponents.day = 7
-        firstLandPhoneCallDateComponents.timeZone = NSTimeZone(name: "US/Eastern")
-        
-        // We have a calendar and date components. We can now make a date!
-        // On my system (US/Eastern time zone), the result for the line below is
-        // "Mar 10, 1876, 12:00 AM"
-        let firstLandPhoneCallDate = userCalendar.dateFromComponents(firstLandPhoneCallDateComponents)!
+        let firstLandPhoneCallDate = userCalendar.dateFromComponents(kidAgeDateComponents)!
         
         return calculateAge(firstLandPhoneCallDate)
     }

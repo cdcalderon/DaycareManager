@@ -117,7 +117,8 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
             "fulldate": "\(todayDate.month)-\(todayDate.day)-\(todayDate.year)",
             "action": "checkin",
             "kid": self.kid.kidKey,
-            "parent": self.selectedParentId!
+            "parent": self.selectedParentId!,
+            "timestamp": [".sv": "timestamp"]
         ]
         
         firebaseCheckAction.setValue(checkAction)
@@ -143,7 +144,9 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
             "minute": todayDate.minute,
             "action": "checkout",
             "kid": self.kid.kidKey,
-            "parent": self.selectedParentId!
+            "parent": self.selectedParentId!,
+            "timestamp": [".sv": "timestamp"]
+
         ]
         
         firebaseCheckAction.setValue(checkAction)

@@ -332,6 +332,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ueg-3p-2aQ">
+                        <barButtonItem key="leftBarButtonItem" title="Send Report" id="1eR-h5-K76">
+                            <connections>
+                                <segue destination="nqd-07-MZP" kind="show" identifier="sendReport" id="sqb-jS-RKr"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="spw-yL-pnt">
                             <connections>
                                 <segue destination="IL5-zV-nOY" kind="show" identifier="addparentandkids" id="n1N-Se-weS"/>
@@ -346,6 +351,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rkc-OC-kLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2193" y="1156"/>
+        </scene>
+        <!--Send Report View Controller-->
+        <scene sceneID="7vC-vN-40H">
+            <objects>
+                <viewController id="nqd-07-MZP" customClass="SendReportViewController" customModule="DaycareManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyu-YP-UXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cgh-cT-JQS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sRi-E1-Lum">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Gc-wb-v6E">
+                                <rect key="frame" x="0.0" y="183" width="600" height="83"/>
+                                <date key="date" timeIntervalSinceReferenceDate="486111188.63410199">
+                                    <!--2016-05-28 06:53:08 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="toDatePickerChanged:" destination="nqd-07-MZP" eventType="valueChanged" id="5ec-qO-2Ky"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9th-4C-qAQ">
+                                <rect key="frame" x="0.0" y="72" width="600" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="hzc-0f-zam"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="486111188.63410199">
+                                    <!--2016-05-28 06:53:08 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="fromDatePickerChanged:" destination="nqd-07-MZP" eventType="valueChanged" id="ww8-DY-dNU"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9th-4C-qAQ" firstAttribute="leading" secondItem="sRi-E1-Lum" secondAttribute="leadingMargin" constant="-20" id="9Ip-C6-znu"/>
+                            <constraint firstItem="9th-4C-qAQ" firstAttribute="top" secondItem="jyu-YP-UXh" secondAttribute="bottom" constant="8" id="RnV-tW-I0k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9th-4C-qAQ" secondAttribute="trailing" constant="-20" id="klH-Ce-mup"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fromDatePicker" destination="9th-4C-qAQ" id="zqa-BK-Tm1"/>
+                        <outlet property="toDatePicker" destination="2Gc-wb-v6E" id="LRb-8j-bXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xgs-oj-8cO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957" y="1976"/>
         </scene>
         <!--Add Kid View Controller-->
         <scene sceneID="iwZ-jo-zPm">

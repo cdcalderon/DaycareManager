@@ -18,6 +18,9 @@ class DMKid {
     private var _parents: Dictionary<String, String> = [:]
     private var _currentStatus: Status = .Default
     private var _checkStatus: String!
+    private var _years:Int?
+    private var _months: Int?
+    private var _days: Int?
     
     
     enum Status {
@@ -50,6 +53,18 @@ class DMKid {
     
     var checkStatus: String {
         return _checkStatus
+    }
+    
+    var years: Int {
+        return _years!
+    }
+    
+    var months: Int {
+        return _months!
+    }
+    
+    var days: Int {
+        return _days!
     }
     
     var currentStatus: Status {
