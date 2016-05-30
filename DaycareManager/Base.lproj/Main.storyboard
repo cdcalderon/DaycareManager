@@ -127,7 +127,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-tB-eD8">
                                                 <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-gw-DOR" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-gw-DOR" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="37" width="415" height="34"/>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
@@ -275,22 +275,23 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XeQ-ng-GMk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LND-XS-pfO">
-                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="itemSize" width="175" height="175"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                    <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="3"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="PJm-CZ-y3I" customClass="KidCell" customModule="DaycareManager" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="69" width="160" height="160"/>
+                                        <rect key="frame" x="3" y="67" width="175" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-qJ-Hwz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="180"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzq-hg-KJ1">
                                                     <rect key="frame" x="102" y="0.0" width="48" height="44"/>
@@ -310,6 +311,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="ageLabel" destination="hnd-If-DIo" id="VqR-N1-xix"/>
                                             <outlet property="captionLabel" destination="6ec-Us-UnP" id="101-NX-mec"/>
@@ -324,7 +326,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.86703708267908897" green="0.95294117649999999" blue="0.16456582939917028" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qbn-QG-Wpc" firstAttribute="top" secondItem="XeQ-ng-GMk" secondAttribute="bottom" id="7Dm-A8-i1v"/>
                             <constraint firstItem="XeQ-ng-GMk" firstAttribute="top" secondItem="xDw-C4-ob1" secondAttribute="topMargin" id="XnQ-fX-ULH"/>
@@ -427,69 +429,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEW-Q2-9iN">
-                                <rect key="frame" x="120" y="86" width="460" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="CG6-4L-VcU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="MuA-PN-1qh"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-bM-VhR">
-                                <rect key="frame" x="122" y="126" width="458" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="qEU-LW-6t0"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="qP1-eP-dRu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="aEt-7D-aAS"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psq-yB-aH2">
-                                <rect key="frame" x="122" y="166" width="65" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HHp-x8-tJv"/>
-                                    <constraint firstAttribute="width" constant="65" id="oj8-6Z-sKn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="pNS-wu-UVC"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-UX-QBX">
-                                <rect key="frame" x="212" y="166" width="65" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cuo-IW-GGh"/>
-                                    <constraint firstAttribute="width" constant="65" id="rdW-IV-11G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="F5R-So-eWa"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-bo-Ma7">
-                                <rect key="frame" x="302" y="166" width="65" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="I5s-08-XFX"/>
-                                    <constraint firstAttribute="width" constant="65" id="NiQ-pH-uBn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="kDN-i6-ZhV"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcq-J8-i83" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="526" width="600" height="74"/>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="Amw-nk-g1n"/>
                                     <constraint firstAttribute="height" constant="74" id="FHU-3c-P3Y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
@@ -501,116 +445,304 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-Eb-ffP" customClass="MaterialButton" customModule="DaycareManager" customModuleProvider="target">
-                                <rect key="frame" x="161" y="225" width="77" height="30"/>
+                                <rect key="frame" x="20" y="254" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="UkE-nw-rhA"/>
+                                    <constraint firstAttribute="height" constant="30" id="sQ4-GY-e9f"/>
+                                </constraints>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="addKidImageButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="xf6-0q-sHc"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="EY5-u9-MlH">
-                                <rect key="frame" x="246" y="220" width="108" height="106"/>
+                                <rect key="frame" x="217" y="236" width="167" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="BWt-rV-Sve"/>
-                                    <constraint firstAttribute="height" constant="106" id="WqI-sf-zB1"/>
+                                    <constraint firstAttribute="height" constant="128" id="M0w-oZ-Qse"/>
+                                    <constraint firstAttribute="width" constant="167" id="g5g-bV-0oR"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZT2-8g-nuL">
-                                <rect key="frame" x="20" y="401" width="167" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZM-0s-bMt" customClass="MaterialView" customModule="DaycareManager" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="145"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEW-Q2-9iN" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="10" width="444" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CG6-4L-VcU"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="MuA-PN-1qh"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-bM-VhR" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="57" width="444" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qEU-LW-6t0"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="aEt-7D-aAS"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psq-yB-aH2" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="104" width="65" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HHp-x8-tJv"/>
+                                            <constraint firstAttribute="width" constant="65" id="oj8-6Z-sKn"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="pNS-wu-UVC"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-UX-QBX" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="194" y="104" width="65" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cuo-IW-GGh"/>
+                                            <constraint firstAttribute="width" constant="65" id="rdW-IV-11G"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="F5R-So-eWa"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaW-4A-iNh">
+                                        <rect key="frame" x="8" y="15" width="92" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4Ah-ss-gF6"/>
+                                            <constraint firstAttribute="width" constant="92" id="GuE-hQ-RYW"/>
+                                            <constraint firstAttribute="height" constant="21" id="lxF-Zs-XJO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-Hk-AtQ">
+                                        <rect key="frame" x="8" y="58" width="92" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="92" id="7mM-vm-I2Z"/>
+                                            <constraint firstAttribute="height" constant="25" id="F4q-zg-uZh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M70-F2-S7b">
+                                        <rect key="frame" x="55" y="108" width="37" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Wgg-b7-aCA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-bo-Ma7" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="104" width="65" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="I5s-08-XFX"/>
+                                            <constraint firstAttribute="width" constant="65" id="NiQ-pH-uBn"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="kDN-i6-ZhV"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="aN7-CD-8aG"/>
-                                    <constraint firstAttribute="width" constant="167" id="oHg-kE-mSH"/>
-                                    <constraint firstAttribute="width" constant="211" id="qZD-sB-Bpr"/>
+                                    <constraint firstItem="psq-yB-aH2" firstAttribute="leading" secondItem="M70-F2-S7b" secondAttribute="trailing" constant="16" id="6vK-91-LvI"/>
+                                    <constraint firstItem="nEW-Q2-9iN" firstAttribute="top" secondItem="zZM-0s-bMt" secondAttribute="top" constant="10" id="80W-BD-hex"/>
+                                    <constraint firstItem="Xaa-bM-VhR" firstAttribute="top" secondItem="nEW-Q2-9iN" secondAttribute="bottom" constant="17" id="FjQ-Fg-Mq8"/>
+                                    <constraint firstItem="aaW-4A-iNh" firstAttribute="centerY" secondItem="nEW-Q2-9iN" secondAttribute="centerY" id="HfV-li-f4k"/>
+                                    <constraint firstItem="Xaa-bM-VhR" firstAttribute="leading" secondItem="SPW-Hk-AtQ" secondAttribute="trailing" constant="8" id="JBL-ve-Wjl"/>
+                                    <constraint firstItem="psq-yB-aH2" firstAttribute="top" secondItem="Xaa-bM-VhR" secondAttribute="bottom" constant="17" id="MKe-43-mts"/>
+                                    <constraint firstItem="cl1-UX-QBX" firstAttribute="leading" secondItem="psq-yB-aH2" secondAttribute="trailing" constant="21" id="Qxo-P9-LEK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xaa-bM-VhR" secondAttribute="trailing" constant="8" id="UW3-6e-x9Z"/>
+                                    <constraint firstItem="eJO-bo-Ma7" firstAttribute="centerY" secondItem="cl1-UX-QBX" secondAttribute="centerY" id="VO1-ND-SYv"/>
+                                    <constraint firstAttribute="height" constant="145" id="WmO-Wb-oFC"/>
+                                    <constraint firstItem="psq-yB-aH2" firstAttribute="leading" secondItem="Xaa-bM-VhR" secondAttribute="leading" id="bdY-9q-t3t"/>
+                                    <constraint firstItem="SPW-Hk-AtQ" firstAttribute="baseline" secondItem="Xaa-bM-VhR" secondAttribute="baseline" id="cls-TB-hq7"/>
+                                    <constraint firstItem="aaW-4A-iNh" firstAttribute="leading" secondItem="zZM-0s-bMt" secondAttribute="leading" constant="8" id="d46-de-3Hi"/>
+                                    <constraint firstItem="cl1-UX-QBX" firstAttribute="centerY" secondItem="psq-yB-aH2" secondAttribute="centerY" id="dje-Bo-p4q"/>
+                                    <constraint firstItem="eJO-bo-Ma7" firstAttribute="leading" secondItem="cl1-UX-QBX" secondAttribute="trailing" constant="15" id="eCi-wk-5jx"/>
+                                    <constraint firstItem="Xaa-bM-VhR" firstAttribute="trailing" secondItem="nEW-Q2-9iN" secondAttribute="trailing" id="n6J-pB-qh6"/>
+                                    <constraint firstItem="SPW-Hk-AtQ" firstAttribute="leading" secondItem="aaW-4A-iNh" secondAttribute="leading" id="sko-ew-A0b"/>
+                                    <constraint firstItem="Xaa-bM-VhR" firstAttribute="leading" secondItem="nEW-Q2-9iN" secondAttribute="leading" id="uUV-Cw-2Ak"/>
+                                    <constraint firstItem="M70-F2-S7b" firstAttribute="centerY" secondItem="psq-yB-aH2" secondAttribute="centerY" id="xcq-Qq-25m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAD-Vx-Wbl" customClass="MaterialView" customModule="DaycareManager" customModuleProvider="target">
+                                <rect key="frame" x="20" y="366" width="180" height="135"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZG-JS-Z4N">
+                                        <rect key="frame" x="8" y="8" width="32.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-P9-otY" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="89" width="164" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ErM-R0-VNf"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="0xq-FC-KMP"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZT2-8g-nuL" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="39" width="164" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="TQt-M1-kQ8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="WUs-1O-vMF"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="aN7-CD-8aG"/>
+                                            <constraint firstAttribute="width" constant="167" id="oHg-kE-mSH"/>
+                                            <constraint firstAttribute="width" constant="211" id="qZD-sB-Bpr"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="WUs-1O-vMF"/>
+                                                <exclude reference="aN7-CD-8aG"/>
+                                                <exclude reference="oHg-kE-mSH"/>
+                                                <exclude reference="qZD-sB-Bpr"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="xh0-Sv-Yet"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VvL-P9-otY" firstAttribute="trailing" secondItem="ZT2-8g-nuL" secondAttribute="trailing" id="07h-59-Y5N"/>
+                                    <constraint firstItem="JZG-JS-Z4N" firstAttribute="leading" secondItem="GAD-Vx-Wbl" secondAttribute="leading" constant="8" id="5RV-IH-y4i"/>
+                                    <constraint firstItem="JZG-JS-Z4N" firstAttribute="top" secondItem="GAD-Vx-Wbl" secondAttribute="top" constant="8" id="9Ke-4v-Mhi"/>
+                                    <constraint firstItem="VvL-P9-otY" firstAttribute="trailing" secondItem="ZT2-8g-nuL" secondAttribute="trailing" id="AZO-MF-zKF"/>
+                                    <constraint firstAttribute="height" constant="135" id="Gb3-7l-xYh"/>
+                                    <constraint firstItem="ZT2-8g-nuL" firstAttribute="leading" secondItem="JZG-JS-Z4N" secondAttribute="leading" id="Lur-7H-tC7"/>
+                                    <constraint firstItem="ZT2-8g-nuL" firstAttribute="leading" secondItem="GAD-Vx-Wbl" secondAttribute="leading" constant="8" id="SrT-jS-fsq"/>
+                                    <constraint firstItem="VvL-P9-otY" firstAttribute="top" secondItem="ZT2-8g-nuL" secondAttribute="bottom" constant="20" id="WPy-EW-NyS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZT2-8g-nuL" secondAttribute="trailing" constant="8" id="d40-3R-Qqa"/>
+                                    <constraint firstAttribute="width" constant="180" id="ga3-zI-nRN"/>
+                                    <constraint firstItem="ZT2-8g-nuL" firstAttribute="top" secondItem="JZG-JS-Z4N" secondAttribute="bottom" constant="8" id="p3C-FF-veF"/>
+                                    <constraint firstItem="VvL-P9-otY" firstAttribute="leading" secondItem="ZT2-8g-nuL" secondAttribute="leading" id="tLa-1b-shQ"/>
+                                </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="qZD-sB-Bpr"/>
+                                        <exclude reference="Lur-7H-tC7"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="xh0-Sv-Yet"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-P9-otY">
-                                <rect key="frame" x="20" y="446" width="167" height="30"/>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="0xq-FC-KMP"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zb-GR-aFK">
-                                <rect key="frame" x="422" y="401" width="167" height="30"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-AT-Cru" customClass="MaterialView" customModule="DaycareManager" customModuleProvider="target">
+                                <rect key="frame" x="400" y="366" width="180" height="135"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zb-GR-aFK" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="39" width="164" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="208" id="0Jn-bd-8Ok"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="A7F-QA-af4"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="167" id="ZdJ-IQ-5Ss"/>
+                                            <constraint firstAttribute="height" constant="30" id="i0n-9x-oVP"/>
+                                            <constraint firstAttribute="height" constant="30" id="rLW-Up-hk5"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="0Jn-bd-8Ok"/>
+                                                <exclude reference="A7F-QA-af4"/>
+                                                <exclude reference="ZdJ-IQ-5Ss"/>
+                                                <exclude reference="i0n-9x-oVP"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="ZtT-VI-agF"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNN-fs-zHF" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="90" width="164" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="57d-EU-6hd"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Rmn-Tz-LGi"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IL5-zV-nOY" id="Djj-ub-Xzy"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-K0-ypi">
+                                        <rect key="frame" x="8" y="8" width="42" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="HAd-Fv-cGf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="HAd-Fv-cGf"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="208" id="0Jn-bd-8Ok"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="A7F-QA-af4"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="167" id="ZdJ-IQ-5Ss"/>
+                                    <constraint firstAttribute="width" constant="180" id="3L1-VG-kD7"/>
+                                    <constraint firstItem="nZx-K0-ypi" firstAttribute="top" secondItem="f2x-AT-Cru" secondAttribute="top" constant="8" id="B5A-hw-DZX"/>
+                                    <constraint firstItem="rNN-fs-zHF" firstAttribute="top" secondItem="3zb-GR-aFK" secondAttribute="bottom" constant="21" id="Bya-E3-ezV"/>
+                                    <constraint firstAttribute="height" constant="135" id="CJo-sp-cQa"/>
+                                    <constraint firstAttribute="bottom" secondItem="rNN-fs-zHF" secondAttribute="bottom" constant="15" id="Di4-ij-QUR"/>
+                                    <constraint firstItem="3zb-GR-aFK" firstAttribute="leading" secondItem="f2x-AT-Cru" secondAttribute="leading" constant="8" id="Ekr-7v-ZQ0"/>
+                                    <constraint firstItem="nZx-K0-ypi" firstAttribute="leading" secondItem="f2x-AT-Cru" secondAttribute="leading" constant="8" id="LTv-GD-oN1"/>
+                                    <constraint firstItem="rNN-fs-zHF" firstAttribute="leading" secondItem="3zb-GR-aFK" secondAttribute="leading" id="QF2-Zw-FnI"/>
+                                    <constraint firstAttribute="trailing" secondItem="3zb-GR-aFK" secondAttribute="trailing" constant="8" id="TO0-mv-844"/>
+                                    <constraint firstItem="3zb-GR-aFK" firstAttribute="leading" secondItem="nZx-K0-ypi" secondAttribute="leading" id="Vev-8P-EfP"/>
+                                    <constraint firstItem="3zb-GR-aFK" firstAttribute="top" secondItem="nZx-K0-ypi" secondAttribute="bottom" constant="8" symbolic="YES" id="lfV-4d-934"/>
+                                    <constraint firstItem="rNN-fs-zHF" firstAttribute="trailing" secondItem="3zb-GR-aFK" secondAttribute="trailing" id="qgQ-bk-sGL"/>
+                                    <constraint firstItem="rNN-fs-zHF" firstAttribute="trailing" secondItem="3zb-GR-aFK" secondAttribute="trailing" id="xP1-jL-bti"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="0Jn-bd-8Ok"/>
+                                        <exclude reference="Vev-8P-EfP"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="ZtT-VI-agF"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNN-fs-zHF">
-                                <rect key="frame" x="422" y="446" width="167" height="30"/>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IL5-zV-nOY" id="Djj-ub-Xzy"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZG-JS-Z4N">
-                                <rect key="frame" x="87" y="361" width="32.5" height="24"/>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-K0-ypi">
-                                <rect key="frame" x="484" y="361" width="42" height="23.5"/>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaW-4A-iNh">
-                                <rect key="frame" x="20" y="90" width="92" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="GuE-hQ-RYW"/>
-                                    <constraint firstAttribute="height" constant="21" id="lxF-Zs-XJO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-Hk-AtQ">
-                                <rect key="frame" x="20" y="128" width="92" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="7mM-vm-I2Z"/>
-                                    <constraint firstAttribute="height" constant="25" id="F4q-zg-uZh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M70-F2-S7b">
-                                <rect key="frame" x="67" y="173" width="37" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Wgg-b7-aCA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haW-Za-bfP">
-                                <rect key="frame" x="102" y="293" width="136" height="33"/>
+                                <rect key="frame" x="444" y="254" width="136" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="9jr-O6-n1b"/>
+                                    <constraint firstAttribute="height" constant="33" id="yuq-hq-e6i"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
-                                <state key="normal" title="Select From Library"/>
+                                <state key="normal" title="From Library"/>
                                 <connections>
                                     <action selector="selectKidImageFromLibraryButtonPressed:" destination="IL5-zV-nOY" eventType="touchUpInside" id="Quw-tm-k5k"/>
                                 </connections>
@@ -618,61 +750,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="zVc-Eb-ffP" secondAttribute="trailing" constant="342" id="2Ng-cx-8NR"/>
-                            <constraint firstItem="haW-Za-bfP" firstAttribute="top" secondItem="zVc-Eb-ffP" secondAttribute="bottom" constant="38" id="5bE-yy-x3W"/>
-                            <constraint firstItem="nEW-Q2-9iN" firstAttribute="leading" secondItem="aaW-4A-iNh" secondAttribute="trailing" constant="8" id="6PQ-6O-M9F"/>
-                            <constraint firstItem="JZG-JS-Z4N" firstAttribute="top" secondItem="haW-Za-bfP" secondAttribute="bottom" constant="35" id="6r1-dK-5h0"/>
-                            <constraint firstItem="aaW-4A-iNh" firstAttribute="top" secondItem="khS-TY-7PI" secondAttribute="bottom" constant="26" id="7VC-Ee-Eex"/>
-                            <constraint firstItem="cl1-UX-QBX" firstAttribute="top" secondItem="Xaa-bM-VhR" secondAttribute="bottom" constant="10" id="88K-zG-Y0F"/>
-                            <constraint firstItem="3zb-GR-aFK" firstAttribute="baseline" secondItem="ZT2-8g-nuL" secondAttribute="baseline" id="8VG-F0-X9s"/>
-                            <constraint firstItem="Xaa-bM-VhR" firstAttribute="top" secondItem="nEW-Q2-9iN" secondAttribute="bottom" constant="10" id="A8Z-dN-2m5"/>
-                            <constraint firstItem="EY5-u9-MlH" firstAttribute="leading" secondItem="haW-Za-bfP" secondAttribute="trailing" constant="8" symbolic="YES" id="AQA-2H-xCU"/>
-                            <constraint firstItem="Qcq-J8-i83" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" constant="-20" id="AXc-p2-Pif"/>
-                            <constraint firstItem="ZT2-8g-nuL" firstAttribute="centerX" secondItem="JZG-JS-Z4N" secondAttribute="centerX" id="ERx-4Y-2t9"/>
-                            <constraint firstItem="EY5-u9-MlH" firstAttribute="top" secondItem="eJO-bo-Ma7" secondAttribute="bottom" constant="24" id="EUF-8d-2ag"/>
-                            <constraint firstItem="EY5-u9-MlH" firstAttribute="centerX" secondItem="14x-Ca-1qs" secondAttribute="centerX" id="Eg4-7p-kQ1"/>
-                            <constraint firstItem="M70-F2-S7b" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" constant="47" id="FWs-vu-m7C"/>
-                            <constraint firstItem="SPW-Hk-AtQ" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" id="G9k-RT-tqs"/>
-                            <constraint firstItem="Xaa-bM-VhR" firstAttribute="top" secondItem="nEW-Q2-9iN" secondAttribute="bottom" constant="10" id="H47-OK-59f"/>
-                            <constraint firstItem="aaW-4A-iNh" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" id="H4O-Na-Lre"/>
-                            <constraint firstItem="ZT2-8g-nuL" firstAttribute="trailing" secondItem="VvL-P9-otY" secondAttribute="trailing" id="HY7-PU-S4r"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qcq-J8-i83" secondAttribute="trailing" constant="-20" id="J42-xM-h7C"/>
-                            <constraint firstItem="ZT2-8g-nuL" firstAttribute="top" secondItem="JZG-JS-Z4N" secondAttribute="bottom" constant="16" id="KkT-im-yPx"/>
-                            <constraint firstItem="ZT2-8g-nuL" firstAttribute="leading" secondItem="SPW-Hk-AtQ" secondAttribute="leading" id="KlO-W3-AtJ"/>
-                            <constraint firstItem="SPW-Hk-AtQ" firstAttribute="top" secondItem="aaW-4A-iNh" secondAttribute="bottom" constant="17" id="OIH-Qy-CgT"/>
-                            <constraint firstItem="TDB-fI-h0O" firstAttribute="top" secondItem="Qcq-J8-i83" secondAttribute="bottom" id="OYe-Fn-xNr"/>
-                            <constraint firstItem="psq-yB-aH2" firstAttribute="leading" secondItem="Xaa-bM-VhR" secondAttribute="leading" id="PF6-e7-1yN"/>
-                            <constraint firstItem="3zb-GR-aFK" firstAttribute="top" secondItem="nZx-K0-ypi" secondAttribute="bottom" constant="16" id="PL8-ck-oV8"/>
-                            <constraint firstItem="haW-Za-bfP" firstAttribute="top" secondItem="zVc-Eb-ffP" secondAttribute="bottom" constant="5" id="Q9b-Pa-xxs"/>
-                            <constraint firstItem="nEW-Q2-9iN" firstAttribute="top" secondItem="khS-TY-7PI" secondAttribute="bottom" constant="22" id="RRp-WN-b7A"/>
-                            <constraint firstItem="EY5-u9-MlH" firstAttribute="centerX" secondItem="Qcq-J8-i83" secondAttribute="centerX" id="T2Q-Cc-4di"/>
-                            <constraint firstItem="eJO-bo-Ma7" firstAttribute="top" secondItem="Xaa-bM-VhR" secondAttribute="bottom" constant="10" id="Ve2-5k-nL9"/>
-                            <constraint firstItem="haW-Za-bfP" firstAttribute="trailing" secondItem="zVc-Eb-ffP" secondAttribute="trailing" id="Xg5-LS-dnL"/>
-                            <constraint firstItem="3zb-GR-aFK" firstAttribute="trailing" secondItem="rNN-fs-zHF" secondAttribute="trailing" id="aoq-p7-kOB"/>
-                            <constraint firstItem="3zb-GR-aFK" firstAttribute="centerX" secondItem="nZx-K0-ypi" secondAttribute="centerX" id="bQb-Qg-QJq"/>
-                            <constraint firstItem="cl1-UX-QBX" firstAttribute="leading" secondItem="psq-yB-aH2" secondAttribute="trailing" constant="25" id="c9A-7r-rKr"/>
-                            <constraint firstItem="ZT2-8g-nuL" firstAttribute="leading" secondItem="VvL-P9-otY" secondAttribute="leading" id="eJU-pi-lf1"/>
-                            <constraint firstItem="3zb-GR-aFK" firstAttribute="top" secondItem="EY5-u9-MlH" secondAttribute="bottom" constant="75" id="iwV-Xs-KEZ"/>
-                            <constraint firstItem="nEW-Q2-9iN" firstAttribute="trailing" secondItem="14x-Ca-1qs" secondAttribute="trailingMargin" id="lbB-fF-ysF"/>
-                            <constraint firstItem="haW-Za-bfP" firstAttribute="bottom" secondItem="EY5-u9-MlH" secondAttribute="bottom" id="llN-Ll-eaL"/>
-                            <constraint firstItem="M70-F2-S7b" firstAttribute="top" secondItem="SPW-Hk-AtQ" secondAttribute="bottom" constant="20" id="mjL-ao-VvA"/>
-                            <constraint firstItem="Xaa-bM-VhR" firstAttribute="trailing" secondItem="14x-Ca-1qs" secondAttribute="trailingMargin" id="qNP-GB-S29"/>
-                            <constraint firstItem="Xaa-bM-VhR" firstAttribute="leading" secondItem="SPW-Hk-AtQ" secondAttribute="trailing" constant="10" id="qom-vo-6HH"/>
-                            <constraint firstItem="psq-yB-aH2" firstAttribute="top" secondItem="Xaa-bM-VhR" secondAttribute="bottom" constant="10" id="rhI-Tf-R19"/>
-                            <constraint firstItem="VvL-P9-otY" firstAttribute="top" secondItem="ZT2-8g-nuL" secondAttribute="bottom" constant="15" id="sMx-df-H2b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3zb-GR-aFK" secondAttribute="trailing" constant="-9" id="uKN-Ar-L8N"/>
-                            <constraint firstItem="3zb-GR-aFK" firstAttribute="leading" secondItem="rNN-fs-zHF" secondAttribute="leading" id="v3U-6V-OiA"/>
-                            <constraint firstItem="zVc-Eb-ffP" firstAttribute="trailing" secondItem="haW-Za-bfP" secondAttribute="trailing" id="wIn-8U-zfQ"/>
-                            <constraint firstItem="rNN-fs-zHF" firstAttribute="top" secondItem="3zb-GR-aFK" secondAttribute="bottom" constant="15" id="z3B-38-lns"/>
-                            <constraint firstItem="eJO-bo-Ma7" firstAttribute="leading" secondItem="cl1-UX-QBX" secondAttribute="trailing" constant="25" id="zVH-VB-Skl"/>
+                            <constraint firstItem="Qcq-J8-i83" firstAttribute="top" secondItem="f2x-AT-Cru" secondAttribute="bottom" constant="25" id="Afo-n2-DRU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qcq-J8-i83" secondAttribute="trailing" constant="-20" id="AxR-K0-2ad"/>
+                            <constraint firstItem="EY5-u9-MlH" firstAttribute="centerX" secondItem="14x-Ca-1qs" secondAttribute="centerX" id="BdH-Dr-w38"/>
+                            <constraint firstItem="haW-Za-bfP" firstAttribute="trailing" secondItem="zZM-0s-bMt" secondAttribute="trailing" id="Cva-Hy-QRl"/>
+                            <constraint firstItem="f2x-AT-Cru" firstAttribute="trailing" secondItem="haW-Za-bfP" secondAttribute="trailing" id="EFp-x4-iOb"/>
+                            <constraint firstItem="zZM-0s-bMt" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" id="GSp-Nr-UZw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zZM-0s-bMt" secondAttribute="trailing" id="Hpt-0r-r9Q"/>
+                            <constraint firstItem="EY5-u9-MlH" firstAttribute="centerY" secondItem="14x-Ca-1qs" secondAttribute="centerY" id="LiS-KR-Ia5"/>
+                            <constraint firstItem="zVc-Eb-ffP" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" id="OFQ-7i-5Wc"/>
+                            <constraint firstItem="zVc-Eb-ffP" firstAttribute="top" secondItem="zZM-0s-bMt" secondAttribute="bottom" constant="37" id="UfZ-YB-4pg"/>
+                            <constraint firstItem="zZM-0s-bMt" firstAttribute="top" secondItem="khS-TY-7PI" secondAttribute="bottom" constant="8" id="dyz-YX-Nsr"/>
+                            <constraint firstItem="TDB-fI-h0O" firstAttribute="top" secondItem="Qcq-J8-i83" secondAttribute="bottom" id="lTo-j8-0xS"/>
+                            <constraint firstItem="haW-Za-bfP" firstAttribute="top" secondItem="zZM-0s-bMt" secondAttribute="bottom" constant="37" id="oFL-9S-mZz"/>
+                            <constraint firstItem="Qcq-J8-i83" firstAttribute="top" secondItem="GAD-Vx-Wbl" secondAttribute="bottom" constant="25" id="od4-hM-Mhb"/>
+                            <constraint firstItem="GAD-Vx-Wbl" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" id="wQT-wR-DrS"/>
+                            <constraint firstItem="Qcq-J8-i83" firstAttribute="leading" secondItem="14x-Ca-1qs" secondAttribute="leadingMargin" constant="-20" id="xU8-mJ-YiH"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="2Ng-cx-8NR"/>
-                                <exclude reference="wIn-8U-zfQ"/>
-                                <exclude reference="Q9b-Pa-xxs"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="dadFirstNameTextField" destination="ZT2-8g-nuL" id="hmU-lw-ZSd"/>
