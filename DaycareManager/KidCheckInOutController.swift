@@ -20,7 +20,14 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
     
     var currentParentDadId: String? = nil
     var currentParentMomId: String? = nil
+    
     var selectedParentId: String? = nil
+    
+    var momFirstName: String? = nil
+    var momLastName: String? = nil
+    var dadFirstName: String? = nil
+    var dadLastName: String? = nil
+
     
     @IBOutlet weak var kidNameLabel: UILabel!
     @IBOutlet weak var kidImageView: UIImageView!
@@ -77,6 +84,8 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
                     
                     let parent = snapshot.value as? Dictionary<String, AnyObject>
                     if let firstName = parent!["firstName"],let lastName = parent!["lastName"] {
+                        self.dadFirstName = firstName as? String
+                        self.dadLastName = lastName as? String
                         self.dadNameLabel.hidden = false
                         self.dadNameLabel.text = "\(firstName) \(lastName)"
                         self.currentParentDadId = key
@@ -91,7 +100,8 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
                     
                     let parent = snapshot.value as? Dictionary<String, AnyObject>
                     if let firstName = parent!["firstName"],let lastName = parent!["lastName"] {
-                        
+                        self.momFirstName = firstName as? String
+                        self.momLastName = lastName as? String
                         self.momNameLabel.hidden = false
                         self.momNameLabel.text = "\(firstName) \(lastName)"
                         self.currentParentMomId = key
@@ -108,7 +118,7 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
         
         let firebaseCheckAction = DataService.ds.REF_CHECK_ACTION.childByAutoId()
         let todayDate = getTodayDate()
-        let checkAction = [
+        let checkDMAction: [String: AnyObject] = [
             "day": todayDate.day,
             "month": todayDate.month,
             "year": todayDate.year,
@@ -117,11 +127,15 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
             "fulldate": "\(todayDate.month)-\(todayDate.day)-\(todayDate.year)",
             "action": "checkin",
             "kid": self.kid.kidKey,
+            "kidfirstname": self.kid.firstName,
+            "kidlastname": self.kid.lastName,
             "parent": self.selectedParentId!,
+            "parentfirstname":self.dadFirstName!,
+            "parentlastname": self.dadLastName!,
             "timestamp": [".sv": "timestamp"]
         ]
         
-        firebaseCheckAction.setValue(checkAction)
+        firebaseCheckAction.setValue(checkDMAction)
         checkInButton.enabled = false
         
         let firebaseKid = DataService.ds.REF_KIDS.childByAppendingPath(self.kid.kidKey)
@@ -135,7 +149,7 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
         
         let firebaseCheckAction = DataService.ds.REF_CHECK_ACTION.childByAutoId()
         let todayDate = getTodayDate()
-        let checkAction = [
+        let checkAction: [String: AnyObject] = [
             "day": todayDate.day,
             "month": todayDate.month,
             "year": todayDate.year,
@@ -144,7 +158,11 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
             "minute": todayDate.minute,
             "action": "checkout",
             "kid": self.kid.kidKey,
+            "kidfirstname": self.kid.firstName,
+            "kidlastname": self.kid.lastName,
             "parent": self.selectedParentId!,
+            "parentfirstname":self.momFirstName!,
+            "parentlastname": self.momLastName!,
             "timestamp": [".sv": "timestamp"]
 
         ]

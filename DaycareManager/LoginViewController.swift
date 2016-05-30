@@ -101,7 +101,17 @@ class LoginViewController: UIViewController {
                         self.showErrorAlert("We could not log in", msg: "plese check your user and password")
                     }
                 } else {
-                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender:  nil)
+                    let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as? String
+                    
+                    if let _ = uid {
+                        self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender:  nil)
+                        
+                    } else {
+                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                        self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender:  nil)
+                    }
+
+                    
                 }
                 
             })

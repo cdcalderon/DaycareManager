@@ -44,30 +44,31 @@ class KidCollectionViewController: UIViewController, UICollectionViewDataSource,
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        
-        
         let currentAppUser = DataService.ds.REF_USER_CURRENT
         
-        DataService.ds.REF_KIDS.queryOrderedByChild("userappid").queryEqualToValue(currentAppUser.key).observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot)
-            
-            self.kidsArray = []
-            
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+        if let currentAppUserKey = currentAppUser.key {
+            DataService.ds.REF_KIDS.queryOrderedByChild("userappid").queryEqualToValue(currentAppUserKey).observeEventType(.Value, withBlock: { snapshot in
+                print(snapshot)
                 
-                for snap in snapshots {
-                    print("SNAP:  \(snap)")
+                self.kidsArray = []
+                
+                if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
                     
-                    if let kidDict = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let kid = DMKid(kidKey: key, dictionary: kidDict)
-                        self.kidsArray.append(kid)
+                    for snap in snapshots {
+                        print("SNAP:  \(snap)")
+                        
+                        if let kidDict = snap.value as? Dictionary<String, AnyObject> {
+                            let key = snap.key
+                            let kid = DMKid(kidKey: key, dictionary: kidDict)
+                            self.kidsArray.append(kid)
+                        }
                     }
                 }
-            }
-            
-            self.kidCollectionView.reloadData()
-        })
+                
+                self.kidCollectionView.reloadData()
+            })
+        }
+        
         
     }
     

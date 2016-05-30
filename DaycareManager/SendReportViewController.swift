@@ -11,19 +11,26 @@ import Firebase
 
 class SendReportViewController: UIViewController {
 
-    
+    var kidsArray = [DMKid]()
+    var reportDict = [String: [DMReport]]()
     
     @IBOutlet weak var fromDatePicker: UIDatePicker!
     
     @IBOutlet weak var toDatePicker: UIDatePicker!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     @IBAction func fromDatePickerChanged(sender: UIDatePicker) {
-        sendReport()
+       
     }
     
     @IBAction func toDatePickerChanged(sender: UIDatePicker) {
     }
     
+    @IBAction func saveButtonPressed(sender: UIButton) {
+        
+        sendReport()
+    }
     
     func setDateAndTime() {
         let dateFormatter = NSDateFormatter()
@@ -38,48 +45,94 @@ class SendReportViewController: UIViewController {
     }
     
     func sendReport () {
-        let calendar = NSCalendar.currentCalendar()
+        var checkActions = [[String:AnyObject]]()
 
-        var fromDateComponents = calendar.components([.Day , .Month , .Year, .Hour, .Minute], fromDate: fromDatePicker.date)
-        
-        var toDateComponents = calendar.components([.Day , .Month , .Year, .Hour, .Minute], fromDate: toDatePicker.date)
+       // let calendar = NSCalendar.currentCalendar()
+
+//        var fromDateComponents = calendar.components([.Day , .Month , .Year, .Hour, .Minute], fromDate: fromDatePicker.date)
+//        
+//        var toDateComponents = calendar.components([.Day , .Month , .Year, .Hour, .Minute], fromDate: toDatePicker.date)
         
      let fromInterval = fromDatePicker.date.timeIntervalSince1970 * 1000
+        let toInterval = toDatePicker.date.timeIntervalSince1970 * 1000
         
         print(fromInterval)
         
-        let currentAppUser = DataService.ds.REF_USER_CURRENT
+       // let currentAppUser = DataService.ds.REF_USER_CURRENT
         
-        DataService.ds.REF_CHECK_ACTION.queryOrderedByChild("timestamp").queryStartingAtValue(fromInterval).observeEventType(.Value, withBlock: { snapshot in
+        DataService.ds.REF_CHECK_ACTION.queryOrderedByChild("timestamp").queryStartingAtValue(fromInterval).queryEndingAtValue(toInterval).observeEventType(.Value, withBlock: { snapshot in
             print(snapshot)
             
        //     self.kidsArray = []
             
+//            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+//                
+//                for snap in snapshots {
+//                    print("SNAP:  \(snap)")
+//                    
+////                    if let kidDict = snap.value as? Dictionary<String, AnyObject> {
+////                        let key = snap.key
+////                        let kid = DMKid(kidKey: key, dictionary: kidDict)
+////                        self.kidsArray.append(kid)
+////                    }
+//                }
+//            }
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
                 
-                for snap in snapshots {
-                    print("SNAP:  \(snap)")
-                    
-//                    if let kidDict = snap.value as? Dictionary<String, AnyObject> {
-//                        let key = snap.key
-//                        let kid = DMKid(kidKey: key, dictionary: kidDict)
-//                        self.kidsArray.append(kid)
-//                    }
+                  for snap in snapshots {
+                        print("SNAP:  \(snap)")
+                
+                         if let checkAction = snap.value as? Dictionary<String, AnyObject> {
+                             checkActions.append(checkAction)
+                          }
                 }
+            }
+            
+            for action in checkActions {
+                print(action)
+                
+                let rDMArray = self.reportDict[(action["kid"] as? String)!]
+                let kidKey = action["kid"] as! String!
+                let kidFirstName = action["kidfirstname"] as! String
+                let kidLastName = action["kidlastname"] as! String
+                let parentFirstName = action["parentfirstname"] as! String
+                let parentLastName = action["parentlastname"] as! String
+                let checkInDay = action["day"] as! Int
+                let checkInMonth = action["month"] as! Int
+                let checkInYear = action["year"] as! Int
+                let checkOutDay = action["day"] as! Int
+                let checkOutMonth = action["month"] as! Int
+                let checkOutYear = action["year"] as! Int
+
+                let dmKid = DMReport(kidFirstName: kidFirstName, kidLastName: kidLastName, kidKey: kidKey, checkInDay: checkInDay, checkInMonth: checkInMonth, checkInYear: checkInYear, checkOutDay: checkOutDay, checkOutMonth: checkOutMonth, checkOutYear: checkOutYear, parentFirstName: parentFirstName, parentLastName: parentLastName)
+                
+                if let _ = rDMArray {
+                    
+                    self.reportDict[kidKey]?.append(dmKid)
+                } else {
+                    self.reportDict[(action["kid"] as? String)!] = [dmKid]
+                }
+               
+//                self.reportDict[(action["kid"] as? String)!] = DMReport(kidFirstName: "", kidLastName: "", kidKey: "", checkInDay: 3, checkInMonth: 4, checkInYear: 3, checkOutDay: 5, checkOutMonth: 5, checkOutYear: 4, parentFirstName: "", parentLastName: "")
             }
             
             //self.kidCollectionView.reloadData()
         })
         
         
+        var reportArr: [DMReport] = [DMReport]()
         
-//        var ar: [DMReport] = [DMReport]()
-//        
-//        ar.append(DMReport(kidFirstName: "Coky", kidLastName: "Calderon", kidKey: "123456789", checkInDay: 12, checkInMonth: 3, checkInYear: 2016, checkOutDay: 12, checkOutMonth: 3, checkOutYear: 2016, parentFirstName: "Carlos", parentLastName: "Calderon"))
-//        
-//        exportDatabase(ar)
+        for (kid, dmReports) in self.reportDict {
+            
+            print(kid)
+            
+            for report in dmReports {
+                reportArr.append(report)
+            }
+        }
         
-
+        exportDatabase(reportArr)
+        
     }
     
     
