@@ -105,9 +105,9 @@ class KidCell: UICollectionViewCell {
         
         let kidAgeDateComponents = NSDateComponents()
         
-        kidAgeDateComponents.year = 1979
-        kidAgeDateComponents.month = 5
-        kidAgeDateComponents.day = 7
+        kidAgeDateComponents.year = kid.dobYear
+        kidAgeDateComponents.month = kid.dobMonth
+        kidAgeDateComponents.day = kid.dobDay
         kidAgeDateComponents.timeZone = NSTimeZone(name: "US/Eastern")
         
         let firstLandPhoneCallDate = userCalendar.dateFromComponents(kidAgeDateComponents)!

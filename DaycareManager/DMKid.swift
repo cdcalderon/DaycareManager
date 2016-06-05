@@ -22,6 +22,10 @@ class DMKid {
     private var _months: Int?
     private var _days: Int?
     
+    private var _dobDay: Int?
+    private var _dobMonth: Int?
+    private var _dobYear: Int?
+    
     
     enum Status {
         case Default, CheckedIn, CheckedOut
@@ -67,6 +71,19 @@ class DMKid {
         return _days!
     }
     
+    var dobDay: Int {
+        return _dobDay!
+    }
+    
+    var dobMonth: Int {
+        return _dobMonth!
+    }
+    
+    var dobYear: Int {
+        return _dobYear!
+    }
+    
+    
     var currentStatus: Status {
         get {
             return _currentStatus
@@ -102,6 +119,18 @@ class DMKid {
         
         if let kidparents = dictionary["parents"] as? Dictionary<String, String> {
             self._parents = kidparents
+        }
+        
+        if let dobDay = dictionary["day"] as? Int {
+            self._dobDay = dobDay
+        }
+        
+        if let dobMonth = dictionary["month"] as? Int {
+            self._dobMonth = dobMonth
+        }
+        
+        if let dobYear = dictionary["year"] as? Int {
+            self._dobYear = dobYear
         }
         
         if let checkStatus = dictionary["status"] as? String {

@@ -33,6 +33,7 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var momLastNameTextField: UITextField!
     
+    @IBOutlet weak var kidDOBDatePicker: UIDatePicker!
     
     var imagePicker: UIImagePickerController!
     
@@ -47,6 +48,7 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func saveKidButtonPressed(sender: UIButton) {
         self.saveKidToFirebase()
+        
     }
     
     @IBAction func addKidImageButtonPressed(sender: UIButton) {
@@ -96,6 +98,7 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         uploader.upload(UIImageJPEGRepresentation(selectedImage.image!, 0.8), options: ["format":"jpg"], withCompletion: { sucessResult, error, code, context in
             print("DONE IMAGE")
+            var kidDOB = self.getDOB()
             let kid:[String:AnyObject]
             let firebaseKid = DataService.ds.REF_KIDS.childByAutoId()
             if let firstName = self.firstNameTextField.text where !self.firstNameTextField.text!.isEmpty,
@@ -106,7 +109,10 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                     "firstName": firstName,
                     "lastName": lastName,
                     "imageUrl": imageUrl,
-                    "userappid": currentUser.key
+                    "userappid": currentUser.key,
+                    "month": kidDOB.month,
+                    "day": kidDOB.day,
+                    "year": kidDOB.year
                 ]
                 firebaseKid.setValue(kid)
                 self.firstNameTextField.text = ""
@@ -168,18 +174,14 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
                 firebaseKidParentsMom.updateChildValues(momOfKid)
                 
             }
-            
+            self.navigationController?.popViewControllerAnimated(true)
             }) { (p1, p2, p3,p4) in
                 
         }
         
         
-//        if imgUrl != nil {
-//            kid["imageUrl"] = imgUrl!
-//        }
-        
-       
-        
+    }
+    @IBAction func kidDOBDatePickerValueChanged(sender: UIDatePicker) {
         
     }
     
@@ -195,6 +197,17 @@ class AddKidViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismissViewControllerAnimated(true, completion: {
             // Anything you want to happen when the user selects cancel
         })
+    }
+    
+    func getDOB() -> (day: Int, month: Int, year: Int){
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day , .Month , .Year, .Hour, .Minute], fromDate: self.kidDOBDatePicker.date)
+        
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+        
+        return (day, month, year)
     }
 
     

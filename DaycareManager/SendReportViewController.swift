@@ -132,6 +132,8 @@ class SendReportViewController: UIViewController {
         }
         
         exportDatabase(reportArr)
+        self.navigationController?.popViewControllerAnimated(true)
+
         
     }
     

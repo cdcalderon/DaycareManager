@@ -143,6 +143,8 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
             "status": "checkedin"
         ]
         firebaseKid.updateChildValues(kid)
+        self.navigationController?.popViewControllerAnimated(true)
+
     }
     
     @IBAction func checkOutButtonPressed(sender: UIButton) {
@@ -175,6 +177,8 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
             "status": "checkedout"
         ]
         firebaseKid.updateChildValues(kid)
+        self.navigationController?.popViewControllerAnimated(true)
+
     }
     
     
@@ -302,6 +306,8 @@ class KidCheckInOutController: UIViewController, UITextFieldDelegate, MFMailComp
             print("Handle Ok logic here")
             
             DataService.ds.REF_KIDS.childByAppendingPath(kid.kidKey).removeValue()
+            self.navigationController?.popViewControllerAnimated(true)
+
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in

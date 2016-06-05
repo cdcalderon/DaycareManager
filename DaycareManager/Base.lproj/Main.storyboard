@@ -44,8 +44,6 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
-            <string>NotoSans</string>
-            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -368,19 +366,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9th-4C-qAQ">
-                                <rect key="frame" x="0.0" y="72" width="600" height="83"/>
+                                <rect key="frame" x="91" y="72" width="508.5" height="83"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="83" id="Nu3-kq-wzK"/>
                                     <constraint firstAttribute="height" constant="83" id="hzc-0f-zam"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="486111188.63410199">
                                     <!--2016-05-28 06:53:08 +0000-->
                                 </date>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nu3-kq-wzK"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="fromDatePickerChanged:" destination="nqd-07-MZP" eventType="valueChanged" id="ww8-DY-dNU"/>
                                 </connections>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Gc-wb-v6E">
-                                <rect key="frame" x="0.0" y="183" width="600" height="83"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Gc-wb-v6E">
+                                <rect key="frame" x="91.5" y="183" width="508.5" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="EDt-Sm-lmN"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="486111188.63410199">
                                     <!--2016-05-28 06:53:08 +0000-->
                                 </date>
@@ -388,9 +395,12 @@
                                     <action selector="toDatePickerChanged:" destination="nqd-07-MZP" eventType="valueChanged" id="5ec-qO-2Ky"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk8-Le-fGN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk8-Le-fGN">
                                 <rect key="frame" x="0.0" y="529" width="600" height="71"/>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="0.89526531040000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="iu0-E0-ctL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="20"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -399,12 +409,35 @@
                                     <action selector="saveButtonPressed:" destination="nqd-07-MZP" eventType="touchUpInside" id="rSh-8D-IpO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvG-N5-lWl">
+                                <rect key="frame" x="20" y="103" width="46.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="S54-eP-rM0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpJ-Ob-Uyw">
+                                <rect key="frame" x="20" y="214" width="46.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9th-4C-qAQ" firstAttribute="leading" secondItem="sRi-E1-Lum" secondAttribute="leadingMargin" constant="-20" id="9Ip-C6-znu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wk8-Le-fGN" secondAttribute="trailing" constant="-20" id="0SI-7f-8Cm"/>
+                            <constraint firstItem="Cgh-cT-JQS" firstAttribute="top" secondItem="Wk8-Le-fGN" secondAttribute="bottom" id="5Df-Oe-IGb"/>
+                            <constraint firstItem="2Gc-wb-v6E" firstAttribute="leading" secondItem="9th-4C-qAQ" secondAttribute="leading" id="5dv-sv-tPM"/>
+                            <constraint firstItem="2Gc-wb-v6E" firstAttribute="top" secondItem="9th-4C-qAQ" secondAttribute="bottom" constant="28" id="CXa-PT-gTj"/>
+                            <constraint firstItem="pvG-N5-lWl" firstAttribute="top" secondItem="jyu-YP-UXh" secondAttribute="bottom" constant="39" id="GiL-Dc-VWx"/>
+                            <constraint firstItem="9th-4C-qAQ" firstAttribute="leading" secondItem="pvG-N5-lWl" secondAttribute="trailing" constant="25" id="MJV-yF-fZo"/>
                             <constraint firstItem="9th-4C-qAQ" firstAttribute="top" secondItem="jyu-YP-UXh" secondAttribute="bottom" constant="8" id="RnV-tW-I0k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9th-4C-qAQ" secondAttribute="trailing" constant="-20" id="klH-Ce-mup"/>
+                            <constraint firstItem="2Gc-wb-v6E" firstAttribute="trailing" secondItem="9th-4C-qAQ" secondAttribute="trailing" id="lH5-WZ-Xny"/>
+                            <constraint firstItem="pvG-N5-lWl" firstAttribute="leading" secondItem="sRi-E1-Lum" secondAttribute="leadingMargin" id="oqW-5Z-V5p"/>
+                            <constraint firstItem="Wk8-Le-fGN" firstAttribute="leading" secondItem="sRi-E1-Lum" secondAttribute="leadingMargin" constant="-20" id="zGb-YF-M2t"/>
                         </constraints>
                     </view>
                     <connections>
@@ -491,34 +524,6 @@
                                             <outlet property="delegate" destination="IL5-zV-nOY" id="aEt-7D-aAS"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psq-yB-aH2" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
-                                        <rect key="frame" x="108" y="104" width="65" height="30"/>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="HHp-x8-tJv"/>
-                                            <constraint firstAttribute="width" constant="65" id="oj8-6Z-sKn"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="IL5-zV-nOY" id="pNS-wu-UVC"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-UX-QBX" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
-                                        <rect key="frame" x="194" y="104" width="65" height="30"/>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="cuo-IW-GGh"/>
-                                            <constraint firstAttribute="width" constant="65" id="rdW-IV-11G"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="IL5-zV-nOY" id="F5R-So-eWa"/>
-                                        </connections>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaW-4A-iNh">
                                         <rect key="frame" x="8" y="15" width="92" height="21"/>
                                         <constraints>
@@ -540,8 +545,20 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Zo-2C-eKV">
+                                        <rect key="frame" x="108" y="103" width="444" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="ffl-y4-fXJ"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="486858128.59983701">
+                                            <!--2016-06-05 22:22:08 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="kidDOBDatePickerValueChanged:" destination="IL5-zV-nOY" eventType="valueChanged" id="GJk-2S-exo"/>
+                                        </connections>
+                                    </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M70-F2-S7b">
-                                        <rect key="frame" x="55" y="108" width="37" height="21"/>
+                                        <rect key="frame" x="54" y="113" width="37" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Wgg-b7-aCA"/>
                                         </constraints>
@@ -549,42 +566,25 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-bo-Ma7" customClass="MaterialTextField" customModule="DaycareManager" customModuleProvider="target">
-                                        <rect key="frame" x="274" y="104" width="65" height="30"/>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="I5s-08-XFX"/>
-                                            <constraint firstAttribute="width" constant="65" id="NiQ-pH-uBn"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="IL5-zV-nOY" id="kDN-i6-ZhV"/>
-                                        </connections>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="psq-yB-aH2" firstAttribute="leading" secondItem="M70-F2-S7b" secondAttribute="trailing" constant="16" id="6vK-91-LvI"/>
+                                    <constraint firstItem="M70-F2-S7b" firstAttribute="centerY" secondItem="1Zo-2C-eKV" secondAttribute="centerY" id="0fA-aL-aNx"/>
                                     <constraint firstItem="nEW-Q2-9iN" firstAttribute="top" secondItem="zZM-0s-bMt" secondAttribute="top" constant="10" id="80W-BD-hex"/>
                                     <constraint firstItem="Xaa-bM-VhR" firstAttribute="top" secondItem="nEW-Q2-9iN" secondAttribute="bottom" constant="17" id="FjQ-Fg-Mq8"/>
                                     <constraint firstItem="aaW-4A-iNh" firstAttribute="centerY" secondItem="nEW-Q2-9iN" secondAttribute="centerY" id="HfV-li-f4k"/>
+                                    <constraint firstItem="1Zo-2C-eKV" firstAttribute="top" secondItem="Xaa-bM-VhR" secondAttribute="bottom" constant="16" id="J1B-8u-pYX"/>
                                     <constraint firstItem="Xaa-bM-VhR" firstAttribute="leading" secondItem="SPW-Hk-AtQ" secondAttribute="trailing" constant="8" id="JBL-ve-Wjl"/>
-                                    <constraint firstItem="psq-yB-aH2" firstAttribute="top" secondItem="Xaa-bM-VhR" secondAttribute="bottom" constant="17" id="MKe-43-mts"/>
-                                    <constraint firstItem="cl1-UX-QBX" firstAttribute="leading" secondItem="psq-yB-aH2" secondAttribute="trailing" constant="21" id="Qxo-P9-LEK"/>
+                                    <constraint firstItem="1Zo-2C-eKV" firstAttribute="leading" secondItem="M70-F2-S7b" secondAttribute="trailing" constant="17" id="KSn-xU-aBt"/>
+                                    <constraint firstItem="1Zo-2C-eKV" firstAttribute="trailing" secondItem="Xaa-bM-VhR" secondAttribute="trailing" id="OSZ-w8-YSC"/>
                                     <constraint firstAttribute="trailing" secondItem="Xaa-bM-VhR" secondAttribute="trailing" constant="8" id="UW3-6e-x9Z"/>
-                                    <constraint firstItem="eJO-bo-Ma7" firstAttribute="centerY" secondItem="cl1-UX-QBX" secondAttribute="centerY" id="VO1-ND-SYv"/>
                                     <constraint firstAttribute="height" constant="145" id="WmO-Wb-oFC"/>
-                                    <constraint firstItem="psq-yB-aH2" firstAttribute="leading" secondItem="Xaa-bM-VhR" secondAttribute="leading" id="bdY-9q-t3t"/>
+                                    <constraint firstItem="1Zo-2C-eKV" firstAttribute="leading" secondItem="Xaa-bM-VhR" secondAttribute="leading" id="aUJ-jY-t5F"/>
                                     <constraint firstItem="SPW-Hk-AtQ" firstAttribute="baseline" secondItem="Xaa-bM-VhR" secondAttribute="baseline" id="cls-TB-hq7"/>
                                     <constraint firstItem="aaW-4A-iNh" firstAttribute="leading" secondItem="zZM-0s-bMt" secondAttribute="leading" constant="8" id="d46-de-3Hi"/>
-                                    <constraint firstItem="cl1-UX-QBX" firstAttribute="centerY" secondItem="psq-yB-aH2" secondAttribute="centerY" id="dje-Bo-p4q"/>
-                                    <constraint firstItem="eJO-bo-Ma7" firstAttribute="leading" secondItem="cl1-UX-QBX" secondAttribute="trailing" constant="15" id="eCi-wk-5jx"/>
                                     <constraint firstItem="Xaa-bM-VhR" firstAttribute="trailing" secondItem="nEW-Q2-9iN" secondAttribute="trailing" id="n6J-pB-qh6"/>
                                     <constraint firstItem="SPW-Hk-AtQ" firstAttribute="leading" secondItem="aaW-4A-iNh" secondAttribute="leading" id="sko-ew-A0b"/>
                                     <constraint firstItem="Xaa-bM-VhR" firstAttribute="leading" secondItem="nEW-Q2-9iN" secondAttribute="leading" id="uUV-Cw-2Ak"/>
-                                    <constraint firstItem="M70-F2-S7b" firstAttribute="centerY" secondItem="psq-yB-aH2" secondAttribute="centerY" id="xcq-Qq-25m"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAD-Vx-Wbl" customClass="MaterialView" customModule="DaycareManager" customModuleProvider="target">
@@ -771,14 +771,12 @@
                     <connections>
                         <outlet property="dadFirstNameTextField" destination="ZT2-8g-nuL" id="hmU-lw-ZSd"/>
                         <outlet property="dadLastNameTextField" destination="VvL-P9-otY" id="mdM-lg-12u"/>
-                        <outlet property="dayTextField" destination="cl1-UX-QBX" id="Rg8-yw-Q9Y"/>
                         <outlet property="firstNameTextField" destination="nEW-Q2-9iN" id="Twe-Ow-R97"/>
+                        <outlet property="kidDOBDatePicker" destination="1Zo-2C-eKV" id="w8l-vQ-yoE"/>
                         <outlet property="lastNameTextField" destination="Xaa-bM-VhR" id="XNV-Ku-621"/>
                         <outlet property="momFirstNameTextField" destination="3zb-GR-aFK" id="xUP-ci-Zdt"/>
                         <outlet property="momLastNameTextField" destination="rNN-fs-zHF" id="3Y0-pQ-Tcj"/>
-                        <outlet property="monthTextField" destination="psq-yB-aH2" id="5U1-do-1We"/>
                         <outlet property="selectedImage" destination="EY5-u9-MlH" id="xQP-c9-cfq"/>
-                        <outlet property="yearTextField" destination="eJO-bo-Ma7" id="hig-us-I4c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jW-Z4-Why" userLabel="First Responder" sceneMemberID="firstResponder"/>
